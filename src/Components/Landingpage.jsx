@@ -152,7 +152,7 @@ Tone your physique and sculpt your body with customized workouts targeting fat l
             </div>
           </div>
         </div>
-        <div className='circle' style={{backgroundColor:' #f17109ff',zIndex:'1'}}>
+        <div className='circle' style={{backgroundColor:' #f17109ff'}}>
         <div >
             <h2>Professional</h2>
             <p style={{maxWidth:'25rem'}}>ideal for individuals who need Advanced features and    tools for client work</p>
