@@ -64,7 +64,7 @@ const Register = () => {
    return (
       // <div style={{margin:'0', height: '100%', width: '100%',   backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',borderRadius:'1rem' }}>
 
-      <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', backgroundColor: 'white', flexWrap: 'wrap', margin: '2rem', padding: '2rem', gap: '1rem', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px', borderRadius: '1rem', color: 'black' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', backgroundColor: 'white', flexWrap: 'wrap',  boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px', borderRadius: '1rem', color: 'black' }}>
          <div>
             <img style={{ width: '25rem', height: '30rem' }} src={video} alt="point" />
          </div>
@@ -120,7 +120,7 @@ const Register = () => {
                   <input style={{ cursor: 'pointer', width: '1rem', height: '1rem' }} required type="checkbox" name="remember" id="" /> <span>read and agree to the <strong onClick={() => { navigate('/termsofcondition') }} style={{ color: 'blue', cursor: 'pointer' }}>terms and conditions</strong></span>
                </div>
 
-               <button type='submit'>Register</button>
+               <button type='submit' style={{marginBottom:'1rem'}}>Register</button>
 
             </form>
          </div>
