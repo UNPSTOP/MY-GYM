@@ -139,12 +139,6 @@ li:hover {
     }
 }
 
-.box:hover {
-    scale: 1.1;
-    cursor: pointer;
-    box-shadow: rgb(195, 177, 177) 0px 5px 15px;
-}
-
 .imgbody:hover {
     border-radius: 0.5rem;
     box-shadow: rgb(195, 177, 177) 0px 5px 15px;
