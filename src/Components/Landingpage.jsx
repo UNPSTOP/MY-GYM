@@ -111,7 +111,7 @@ Tone your physique and sculpt your body with customized workouts targeting fat l
           <div >
             <h2>Basic</h2>
             <p style={{maxWidth:'25rem'}}>ideal for individuals who need quick access to basic fitness features</p>
-            <h1>$0.00 <span>/month</span></h1>
+            <h1>$1.00 <span>/month</span></h1>
             <button>Get started Now</button>
           </div>
 
