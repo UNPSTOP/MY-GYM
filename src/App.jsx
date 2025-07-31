@@ -1,34 +1,80 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState,createContext } from 'react'
 import './App.css'
+import Register from './Components/Register'
+import Loging from './Components/Loging'
+import Newpassord from './Components/Newpassord'
+import Forget from './Components/Forget'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import TermsOfcondition from './Components/TermsOfcondition'
+import Landingpage from './Components/Landingpage'
+export const Numbercontext=createContext();
+const router=createBrowserRouter([
+  {
+path:"/",
+element:<div>
+  <Landingpage/>
+</div>
+  },
+  {
+    path:"/Register",
+    element: <div>
+   
+      <Register/>
+    </div>
+    // 591420
+  },
+  {
+    path:"/loging",
+    element: <div>
+      
+      <Loging/>
+    </div>
+  },
+
+  {
+    path:"/Forget",
+    element: <div>
+ 
+      <Forget/>
+    </div>
+  },
+  {
+    path:"/newpassord",
+    element: <div>
+ 
+      <Newpassord/>
+    </div>
+  },
+  {
+    path:"/termsofcondition",
+    element: <div>
+ 
+      <TermsOfcondition/>
+    </div>
+  },
+  {
+    path:"*",
+    element:<div>
+      <h1 style={{color:"red",fontSize:"2rem",fontWeight:"bold"}}>404 page not found</h1>
+    </div>
+  }
+]);
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [number, setNumber] = useState('');
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+<Numbercontext.Provider value={{number,setNumber}} >
+    <div className='main1'  >
+      <RouterProvider
+      router={router}
+      >
+
+      </RouterProvider>
+      
+      
+    </div>
+     </Numbercontext.Provider>
+    
   )
 }
 
