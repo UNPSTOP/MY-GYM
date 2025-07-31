@@ -59,17 +59,16 @@ li:hover {
 /* Pricing Cards */
 
 .circle {
-    padding: 1rem;
-    width: 28%;
     box-shadow: rgba(8, 8, 8, 1) 0px 5px 15px;
-    margin: 1rem;
     border-top-right-radius: 3rem;
     border-bottom-left-radius: 3rem;
-    background-color: black;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+    width: 30%;
+    /* height: 18rem; */
     flex-direction: column;
 }
 
@@ -126,7 +125,6 @@ li:hover {
     .box,
     .circle {
         width: 100% !important;
-        max-width: 95%;
     }
     .tick img {
         width: 1.5rem;

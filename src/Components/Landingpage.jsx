@@ -104,18 +104,18 @@ Tone your physique and sculpt your body with customized workouts targeting fat l
          </div>
       </div>
                 <h2>SIMPLE, TRANSPARANT PRICING</h2>
-      <div style={{ width: '100%', display: 'flex', marginTop: '2rem', flexWrap: 'wrap',justifyContent:'center' , alignItems: 'center' ,gap:'1rem'}}>
+      <div style={{  width: '100%', display: 'flex', marginTop: '2rem', flexWrap: 'wrap',justifyContent:'center' , alignItems: 'center' ,gap:'1rem'}}>
         
         <div className='circle' style={{backgroundColor:'#232323'}}>
 
           <div >
             <h2>Basic</h2>
-            <p>ideal for individuals who need quick access to basic fitness features</p>
+            <p style={{maxWidth:'25rem'}}>ideal for individuals who need quick access to basic fitness features</p>
             <h1>$0.00 <span>/month</span></h1>
             <button>Get started Now</button>
           </div>
 
-          <div style={{marginTop:'0.5rem'}}>
+          <div style={{marginTop:'0.5rem',marginLeft:'1.2rem'}}>
             <div className='tick'>
               <img src={tick} alt="yes" />
               <p>20,000+ og PNG & SVG Graphics</p>
@@ -155,12 +155,12 @@ Tone your physique and sculpt your body with customized workouts targeting fat l
         <div className='circle' style={{backgroundColor:' #f17109ff',zIndex:'1'}}>
         <div >
             <h2>Professional</h2>
-            <p>ideal for individuals who need Advanced features and    tools for client work</p>
+            <p style={{maxWidth:'25rem'}}>ideal for individuals who need Advanced features and    tools for client work</p>
             <h1>$25.00<span>/month</span></h1>
             <button>Get started Now</button>
           </div>
 
-          <div style={{marginTop:'0.5rem'}}>
+          <div style={{marginTop:'0.5rem',marginLeft:'1.2rem'}}>
             <div className='tick'>
               <img src={tick} alt="yes" />
               <p>20,000+ og PNG & SVG Graphics</p>
@@ -200,12 +200,12 @@ Tone your physique and sculpt your body with customized workouts targeting fat l
         <div className='circle' style={{backgroundColor:' #56855cff'}}>
             <div >
             <h2>Basic</h2>
-            <p>ideal for individuals who need quick access to basic fitness features</p>
+            <p style={{maxWidth:'25rem'}}>ideal for individuals who need quick access to basic fitness features</p>
             <h1>$100 <span>/month</span></h1>
             <button>Get started Now</button>
           </div>
 
-          <div style={{marginTop:'0.5rem'}}>
+          <div style={{marginTop:'0.5rem',marginLeft:'1.2rem'}}>
             <div className='tick'>
               <img src={tick} alt="yes" />
               <p>20,000+ og PNG & SVG Graphics</p>
