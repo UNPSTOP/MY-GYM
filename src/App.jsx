@@ -40,14 +40,14 @@ element:<div >
   },
   {
     path:"/newpassord",
-    element: <div>
+    element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
  
       <Newpassord/>
     </div>
   },
   {
     path:"/termsofcondition",
-    element: <div>
+    element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
  
       <TermsOfcondition/>
     </div>

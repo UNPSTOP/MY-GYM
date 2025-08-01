@@ -30,7 +30,7 @@ const Newpassord = () => {
         console.log(data);
     }
     return (
-        <div style={{ backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem', boxShadow: 'rgba(8, 8, 8, 1) 0px 5px 15px',borderRadius:'1rem' }}>
+        <div style={{ backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem', boxShadow: 'rgba(8, 8, 8, 1) 0px 5px 15px',borderRadius:'1rem' ,maxWidth: '40rem' }}>
             
            <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }} >
             <h2 style={{ textAlign: 'center', color: 'red',fontFamily: 'cursive' }}>Change Password</h2>
