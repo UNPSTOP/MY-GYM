@@ -69,7 +69,7 @@ const Register = () => {
             <img  src={video} alt="point" />
          </div>
          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-            <div >
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', justifyContent: 'center', alignItems: 'center' }} >
                <h2>USER REGISTER</h2>
                <p>IF YOU ALREADY HAVE AN ACCOUNT <strong onClick={() => navigate('/loging')} style={{ color: 'blue', cursor: 'pointer' }}>click here</strong></p>
             </div>
