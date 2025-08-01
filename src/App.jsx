@@ -33,7 +33,7 @@ element:<div >
 
   {
     path:"/Forget",
-    element: <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+    element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
  
       <Forget/>
     </div>
