@@ -64,16 +64,16 @@ const Register = () => {
    return (
       // <div style={{margin:'0', height: '100%', width: '100%',   backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',borderRadius:'1rem' }}>
 
-      <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', backgroundColor: 'white', flexWrap: 'wrap',  boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px', borderRadius: '1rem', color: 'black' }}>
-         <div>
-            <img style={{ width: '25rem', height: '30rem' }} src={video} alt="point" />
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', flexWrap: 'wrap',  boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px', borderRadius: '1rem', color: 'black' }}>
+         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <img  src={video} alt="point" />
          </div>
          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             <div >
                <h2>USER REGISTER</h2>
                <p>IF YOU ALREADY HAVE AN ACCOUNT <strong onClick={() => navigate('/loging')} style={{ color: 'blue', cursor: 'pointer' }}>click here</strong></p>
             </div>
-            <form onSubmit={register} style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+            <form onSubmit={register} style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '30rem' }}>
                <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', alignItems: 'center' }}>
                   <img style={{ width: '2rem', height: '2rem' }} src={Name} alt="name" />
                   <input value={firstname} onChange={(e) => { setFirstname(e.target.value) }} title="Enter at least 2 letters. Letters and spaces only." required min={3} style={{ borderLeft: 'none', borderRight: 'none', borderTop: 'none', borderBottom: '2px solid black', backgroundColor: 'transparent', width: '20rem', height: '2rem', color: 'black', fontFamily: 'cursive' }} type="text" placeholder='Enter your name' />
@@ -120,7 +120,7 @@ const Register = () => {
                   <input style={{ cursor: 'pointer', width: '1rem', height: '1rem' }} required type="checkbox" name="remember" id="" /> <span>read and agree to the <strong onClick={() => { navigate('/termsofcondition') }} style={{ color: 'blue', cursor: 'pointer' }}>terms and conditions</strong></span>
                </div>
 
-               <button type='submit' style={{marginBottom:'1rem'}}>Register</button>
+               <button type='submit' style={{marginBottom:'1rem',maxWidth:'20rem',height:'2.5rem',borderRadius:'1rem',backgroundColor:'black',color:'white',cursor:'pointer',fontFamily:'cursive' }}>Register</button>
 
             </form>
          </div>
