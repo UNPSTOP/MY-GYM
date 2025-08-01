@@ -72,8 +72,10 @@ const Forget = () => {
                              <img style={{ width: '3.5rem', height: '3.5rem' }} src={OTP} alt="otp" />
                               <input value={otp} onChange={(e) => { setotp(e.target.value) }} pattern="[0-9]{6}" maxLength={6} minLength={6} title='Enter 6 digit number' style={{textAlign:'center', borderLeft: 'none', borderRight: 'none', borderTop: 'none', borderBottom: '2px solid black', backgroundColor: 'transparent', width: '20rem', height: '2rem', color: 'black', fontFamily: 'cursive' }} required type="text" placeholder='Enter your otp' />
                         </div>
-                        <button onClick={getotp2}> get otp</button>
-                        <button>submit</button>
+                        <div style={{ display: 'flex',flexDirection:'column', gap: '1rem', justifyContent: 'center', alignItems: 'center' }}>
+                            <button style={{width:'12rem'}} onClick={getotp2}> get otp</button>
+                        <button style={{width:'12rem'}}>submit</button>
+                        </div>
                     </form>
                 </div>
 
