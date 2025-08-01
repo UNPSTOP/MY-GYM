@@ -73,7 +73,16 @@ const Register = () => {
                <h2>USER REGISTER</h2>
                <p>IF YOU ALREADY HAVE AN ACCOUNT <strong onClick={() => navigate('/loging')} style={{ color: 'blue', cursor: 'pointer' }}>click here</strong></p>
             </div>
-            <form onSubmit={register} style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '30rem' }}>
+
+                {/* display: flex
+;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    justify-content: center;
+    border: 3px solid red;
+    align-items: center; */}
+            <form onSubmit={register} style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '30%',justifyContent: 'center', alignItems: 'center',padding:'1rem' }}>
                <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', alignItems: 'center' }}>
                   <img style={{ width: '2rem', height: '2rem' }} src={Name} alt="name" />
                   <input value={firstname} onChange={(e) => { setFirstname(e.target.value) }} title="Enter at least 2 letters. Letters and spaces only." required min={3} style={{ borderLeft: 'none', borderRight: 'none', borderTop: 'none', borderBottom: '2px solid black', backgroundColor: 'transparent', width: '20rem', height: '2rem', color: 'black', fontFamily: 'cursive' }} type="text" placeholder='Enter your name' />
