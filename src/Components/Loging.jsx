@@ -36,7 +36,7 @@ useEffect(() => {
   
   return (
 
-    <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', backgroundColor: 'white', flexWrap: 'wrap', margin: '2rem', padding: '2rem', gap: '1rem',boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',borderRadius:'1rem'}}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'white', flexWrap: 'wrap',boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',borderRadius:'1rem'}}>
       <div style={{maxWidth:'19rem',justifyContent:'center',alignItems:'center'}}>
         <h2 style={{ textAlign: 'center', color: 'blue', fontFamily: 'cursive' }}>USER LOGIN</h2>
         <form onSubmit={login} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
@@ -51,7 +51,7 @@ useEffect(() => {
           </div>
           <br />
           
-          <button type="submit" >Login</button>
+          <button type="submit" >Lugin</button>
           <p onClick={()=>navigate('/forget') } style={{ textAlign: 'center', color: 'blue', fontFamily: 'karla',cursor:'pointer' }}>Forget Password</p>
         </form>
       </div>
