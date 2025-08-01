@@ -9,7 +9,9 @@ import TermsOfcondition from './Components/TermsOfcondition'
 import Landingpage from './Components/Landingpage'
 import Strength from './Components/Strength'
 import Cardio from './Components/Cardio'
+import Health from './Components/Health'
 export const Numbercontext=createContext();
+
 const router=createBrowserRouter([
   {
 path:"/",
@@ -67,6 +69,13 @@ element:<div style={{ width: "100%",display:"flex",justifyContent:"center",align
     element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
  
       <Cardio/>
+    </div>
+  },
+  {
+    path:"/Health",
+    element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+ 
+      <Health/>
     </div>
   },
   {

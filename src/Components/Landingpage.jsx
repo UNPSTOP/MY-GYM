@@ -88,7 +88,7 @@ Improve your heart health, stamina, and energy levels with cardiovascular workou
               ❤️ Health Training
 Focused on overall wellness, health training combines flexibility, balance, and functional movements. It’s ideal for preventing injuries, improving posture, and promoting a healthy lifestyle inside and out.
              </p>
-            <button style={{marginTop:'-0.5rem'}}>Get started</button>
+            <button onClick={()=>navigate('/Health')} style={{marginTop:'-0.5rem'}}>Get started</button>
            </div>
 
            <div className='box'>
