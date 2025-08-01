@@ -17,7 +17,7 @@ element:<div >
   },
   {
     path:"/Register",
-    element: <div>
+    element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
    
       <Register/>
     </div>

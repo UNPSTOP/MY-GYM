@@ -18,17 +18,18 @@ const Register = () => {
    const navigate = useNavigate();
    const [numbertrue, setnumberfalse] = useState(false);
    function cheqnumber(e) {
-      for (let i = 0; i < arr.length; i++) {
-         if (number == arr[i].number) {
+      let data=JSON.parse(localStorage.getItem('user')) || [];
+      for (let i = 0; i < data.length; i++) {
+         if (number == data[i].number) {
             setnumber(number)
             // const [user,setuser]=useState({number12:number});
             setnumberfalse(true);
-            console.log("yes");
+            // console.log("yes");
             return false
          }
       }
       setnumberfalse(false);
-      console.log("not");
+      // console.log("not");
       return true
    }
    function register(e) {
@@ -74,14 +75,7 @@ const Register = () => {
                <p>IF YOU ALREADY HAVE AN ACCOUNT <strong onClick={() => navigate('/loging')} style={{ color: 'blue', cursor: 'pointer' }}>click here</strong></p>
             </div>
 
-                {/* display: flex
-;
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1rem;
-    justify-content: center;
-    border: 3px solid red;
-    align-items: center; */}
+            
             <form onSubmit={register} style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '30rem',justifyContent: 'center', alignItems: 'center',margin:'1rem' }}>
                <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', alignItems: 'center' }}>
                   <img style={{ width: '2rem', height: '2rem' }} src={Name} alt="name" />
