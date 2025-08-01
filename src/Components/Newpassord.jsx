@@ -30,7 +30,7 @@ const Newpassord = () => {
         console.log(data);
     }
     return (
-        <div style={{ backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem', boxShadow: 'rgba(8, 8, 8, 1) 0px 5px 15px',borderRadius:'1rem' ,maxWidth: '40rem' }}>
+        <div style={{ backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem', boxShadow: 'rgba(8, 8, 8, 1) 0px 5px 15px',borderRadius:'1rem' ,maxWidth: '67%' }}>
             
            <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }} >
             <h2 style={{ textAlign: 'center', color: 'red',fontFamily: 'cursive' }}>Change Password</h2>
@@ -42,17 +42,17 @@ const Newpassord = () => {
                     required min={6} value={password} style={{
                         borderLeft: 'none', borderRight:
                             
-                            'none', borderTop: 'none', borderBottom: '2px solid black', backgroundColor: 'transparent', width:
+                            'none', borderTop: 'none', borderBottom: '2px solid black', backgroundColor: 'transparent', maxWidth:
                             '20rem', height: '2rem', color: 'black', fontFamily: 'cursive'
                     }}
                     type="password" placeholder='Enter your new Password' />
             </div>
             <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', alignItems: 'center' }}>
                 <img style={{ width: '2rem', height: '2rem' }} src={Password} alt="passord" />
-                <input value={confirmpassword} onChange={(e) => { setConfirmpassword(e.target.value) }} required min={6} style={{ borderLeft: 'none', borderRight: 'none', borderTop: 'none', borderBottom: '2px solid black', backgroundColor: 'transparent', width: '20rem', height: '2rem', color: 'black', fontFamily: 'cursive' }} type="password" placeholder='Enter your Confirm Password' />
+                <input value={confirmpassword} onChange={(e) => { setConfirmpassword(e.target.value) }} required min={6} style={{ borderLeft: 'none', borderRight: 'none', borderTop: 'none', borderBottom: '2px solid black', backgroundColor: 'transparent', maxWidth: '20rem', height: '2rem', color: 'black', fontFamily: 'cursive' }} type="password" placeholder='Enter your Confirm Password' />
 
             </div>
-            <button>submit</button>
+            <button style={{maxWidth:'20rem'}} type='submit'>submit</button>
            </form>
         </div>
     )
