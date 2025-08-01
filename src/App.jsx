@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import TermsOfcondition from './Components/TermsOfcondition'
 import Landingpage from './Components/Landingpage'
 import Strength from './Components/Strength'
+import Cardio from './Components/Cardio'
 export const Numbercontext=createContext();
 const router=createBrowserRouter([
   {
@@ -59,6 +60,13 @@ element:<div style={{ width: "100%",display:"flex",justifyContent:"center",align
     element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
  
       <Strength/>
+    </div>
+  },
+  {
+    path:"/cardio",
+    element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+ 
+      <Cardio/>
     </div>
   },
   {

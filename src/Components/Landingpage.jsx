@@ -77,7 +77,7 @@ Build muscle, increase endurance, and boost metabolism through structured resist
 Improve your heart health, stamina, and energy levels with cardiovascular workouts. From running to cycling, cardio training keeps your blood flowing and burns calories effectively for long-term wellness.
 
              </p>
-             <button>Get started</button>
+             <button onClick={()=>navigate('/Cardio')}>Get started</button>
            </div>
 
 
