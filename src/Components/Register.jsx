@@ -82,7 +82,7 @@ const Register = () => {
     justify-content: center;
     border: 3px solid red;
     align-items: center; */}
-            <form onSubmit={register} style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '30%',justifyContent: 'center', alignItems: 'center',margin:'1rem' }}>
+            <form onSubmit={register} style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '30rem',justifyContent: 'center', alignItems: 'center',margin:'1rem' }}>
                <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', alignItems: 'center' }}>
                   <img style={{ width: '2rem', height: '2rem' }} src={Name} alt="name" />
                   <input value={firstname} onChange={(e) => { setFirstname(e.target.value) }} title="Enter at least 2 letters. Letters and spaces only." required min={3} style={{ borderLeft: 'none', borderRight: 'none', borderTop: 'none', borderBottom: '2px solid black', backgroundColor: 'transparent', width: '20rem', height: '2rem', color: 'black', fontFamily: 'cursive' }} type="text" placeholder='Enter your name' />
