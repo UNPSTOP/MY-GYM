@@ -11,7 +11,7 @@ export const Numbercontext=createContext();
 const router=createBrowserRouter([
   {
 path:"/",
-element:<div>
+element:<div >
   <Landingpage/>
 </div>
   },
@@ -33,7 +33,7 @@ element:<div>
 
   {
     path:"/Forget",
-    element: <div>
+    element: <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
  
       <Forget/>
     </div>
