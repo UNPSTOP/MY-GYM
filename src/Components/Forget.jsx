@@ -61,7 +61,7 @@ const Forget = () => {
             <div >
                 <h2 style={{ textAlign: 'center', color: 'red', fontFamily: 'cursive' }}>Forget password</h2>
                 <div>
-                    <form onSubmit={forget} style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }} >
+                    <form onSubmit={forget} style={{ display: 'flex',maxWidth:'20rem', flexDirection: 'column', gap: '2rem' }} >
                         <div style={{ display: 'flex', gap: '0.1rem', justifyContent: 'center', alignItems: 'center' }}>
                             <img style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem' }} src={number1} alt="number" />
                             <input value={number} onChange={(e) => { setnumber(e.target.value) }} pattern="[0-9]{10}" title='Enter 10 digit number' style={{ borderLeft: 'none',textAlign:'center', borderRight: 'none', borderTop: 'none', borderBottom: '2px solid black', backgroundColor: 'transparent', width: '20rem', height: '2rem', color: 'black', fontFamily: 'cursive',marginLeft:'1.7rem' }} type="text" placeholder='Enter your number' />
