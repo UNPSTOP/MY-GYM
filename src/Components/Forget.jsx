@@ -59,7 +59,7 @@ const Forget = () => {
         <div style={{backgroundColor: 'white', display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap', margin: '2rem', padding: '2rem', gap: '1rem', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px', borderRadius: '1rem'}}>
           
             <div style={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
-                <h2 style={{ textAlign: 'center', color: 'red', fontFamily: 'cursive' }}>forget password</h2>
+                <h2 style={{ textAlign: 'center', color: 'red', fontFamily: 'cursive' }}>Forget password</h2>
                 <div>
                     <form onSubmit={forget} style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }} >
                         <div style={{ display: 'flex', gap: '0.1rem', justifyContent: 'center', alignItems: 'center' }}>
