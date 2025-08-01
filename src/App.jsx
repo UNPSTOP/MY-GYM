@@ -7,11 +7,13 @@ import Forget from './Components/Forget'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import TermsOfcondition from './Components/TermsOfcondition'
 import Landingpage from './Components/Landingpage'
+import Strength from './Components/Strength'
 export const Numbercontext=createContext();
 const router=createBrowserRouter([
   {
 path:"/",
-element:<div >
+element:<div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+  
   <Landingpage/>
 </div>
   },
@@ -50,6 +52,13 @@ element:<div >
     element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
  
       <TermsOfcondition/>
+    </div>
+  },
+  {
+    path:"/strength",
+    element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+ 
+      <Strength/>
     </div>
   },
   {

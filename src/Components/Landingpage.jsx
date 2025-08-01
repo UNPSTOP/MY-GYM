@@ -61,7 +61,7 @@ const Landingpage = () => {
              <h3>Strength Training</h3>
           💪 Strength Training
 Build muscle, increase endurance, and boost metabolism through structured resistance workouts. Strength training enhances bone density and overall physical performance, making daily activities easier and safer.
-             <button>Get started</button>
+             <button onClick={()=>navigate('/Strength')}>Get started</button>
 
           
 
