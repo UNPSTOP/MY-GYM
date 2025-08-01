@@ -37,7 +37,7 @@ useEffect(() => {
   return (
 
     <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', backgroundColor: 'white', flexWrap: 'wrap', margin: '2rem', padding: '2rem', gap: '1rem',boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',borderRadius:'1rem'}}>
-      <div>
+      <div style={{maxWidth:'19rem',justifyContent:'center',alignItems:'center'}}>
         <h2 style={{ textAlign: 'center', color: 'blue', fontFamily: 'cursive' }}>USER LOGIN</h2>
         <form onSubmit={login} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
           <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', alignItems: 'center' }}>
@@ -56,8 +56,8 @@ useEffect(() => {
         </form>
       </div>
 
-
-      <div>
+  
+      <div style={{maxWidth:'19rem',display:'flex',justifyContent:'center',alignItems:'center'}}>
        <img  src={ video} alt="Login Animation"   style={{width:"400px", height:"360px",}}/>
 
       </div>
