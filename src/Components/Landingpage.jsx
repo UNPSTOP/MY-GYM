@@ -99,7 +99,7 @@ Focused on overall wellness, health training combines flexibility, balance, and 
               ⏱️ Shape Body
 Tone your physique and sculpt your body with customized workouts targeting fat loss and muscle definition. Shape Body training blends cardio, strength, and mobility to help you achieve a lean, defined look.
              </p>
-             <button>Get started</button>
+             <button onClick={()=>navigate('/Shape')}>Get started</button>
            </div>
          </div>
       </div>

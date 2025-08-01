@@ -10,6 +10,7 @@ import Landingpage from './Components/Landingpage'
 import Strength from './Components/Strength'
 import Cardio from './Components/Cardio'
 import Health from './Components/Health'
+import Shape from './Components/BodShape'
 export const Numbercontext=createContext();
 
 const router=createBrowserRouter([
@@ -76,6 +77,13 @@ element:<div style={{ width: "100%",display:"flex",justifyContent:"center",align
     element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
  
       <Health/>
+    </div>
+  },
+  {
+    path:"/Shape",
+    element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+ 
+      <Shape/>
     </div>
   },
   {
