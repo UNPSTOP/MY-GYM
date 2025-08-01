@@ -70,7 +70,7 @@ const Register = () => {
          </div>
          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             <div >
-               <h2>USER REGISTER</h2>
+               <h2>USER PEGISTER</h2>
                <p>IF YOU ALREADY HAVE AN ACCOUNT <strong onClick={() => navigate('/loging')} style={{ color: 'blue', cursor: 'pointer' }}>click here</strong></p>
             </div>
 
