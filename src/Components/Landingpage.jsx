@@ -12,17 +12,21 @@ import body2 from '../assets/body2.jpeg'
 import body3 from '../assets/body3.jpg'
 import tick2 from '../assets/tick2.jpeg'
 import { useNavigate } from 'react-router-dom'
-
+import { Numbercontext } from '../App'
+import { useContext } from 'react'
 const Landingpage = () => {
   // const  [amount,setamount]=useState(0);
-
+  const{istrue2}=useContext(Numbercontext);
    const handlePayment = (amount) => {
-    const options = {
+    if(!istrue2){
+      alert('please login first')
+    }else{
+      const options = {
       key: "rzp_live_KLergsCNd2cdEm", // 🛑 Replace with your Razorpay key
       amount: amount*100, // in paise = ₹500.00
       currency: "INR",
-      name: "My App",
-      description: "Test Transaction",
+      name: "Gym Website",
+      description: " Transaction",
       image: "https://your-logo-url.com/logo.png",
       handler: function (response) {
         alert("Payment successful! ID: " + response.razorpay_payment_id);
@@ -40,6 +44,7 @@ const Landingpage = () => {
 
     const razorpay = new window.Razorpay(options);
     razorpay.open();
+    }
   };
 
   const navigate=useNavigate();

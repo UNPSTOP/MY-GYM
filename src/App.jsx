@@ -129,8 +129,9 @@ element:<div style={{ width: "100%",display:"flex",justifyContent:"center",align
 
 function App() {
   const [number, setNumber] = useState('');
+  const[istrue2,settrue2]=useState(false);
   return (
-<Numbercontext.Provider value={{number,setNumber}} >
+<Numbercontext.Provider value={{number,setNumber,istrue2,settrue2}} >
     <div className='main1'  >
       <RouterProvider
       router={router}

@@ -5,6 +5,7 @@ import Email1 from '../assets/mail.svg'
 import video from '../assets/second1.gif'
 import number1 from '../assets/phone1.svg'
 import { useState } from 'react'
+import { Numbercontext } from '../App'
 import { useNavigate } from 'react-router-dom';
 const Register = () => {
    const [firstname, setFirstname] = useState('')
@@ -17,6 +18,7 @@ const Register = () => {
    const [number, setnumber] = useState('')
    const navigate = useNavigate();
    const [numbertrue, setnumberfalse] = useState(false);
+   const {settrur2 } = useContext(Numbercontext);
    function cheqnumber(e) {
       let data=JSON.parse(localStorage.getItem('user')) || [];
       for (let i = 0; i < data.length; i++) {
@@ -45,6 +47,7 @@ const Register = () => {
 
             localStorage.setItem('user', JSON.stringify(newarr));
             setvalue(newarr)
+            settrur2(true);
             console.log(newarr);
             setFirstname('');
             setLastname('');

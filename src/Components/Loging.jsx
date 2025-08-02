@@ -4,8 +4,11 @@ import Passwordimg from '../assets/Passord.jpeg'
 import video from '../assets/video.gif'
 import { useState ,useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Numbercontext } from '../App'
+import { useContext } from 'react'
+import Landingpage from './Landingpage'
 const Loging = () => {
-
+  const{settrue2}=useContext(Numbercontext);
   const[email1,setEmail]=useState('')  
   const[password1,setPassword]=useState('')
   let[data,setData]=useState([])
@@ -22,7 +25,9 @@ useEffect(() => {
     for(let  i=0;i<data.length;i++){
       if(email1===data[i].email && password1===data[i].password){
         alert('login successful')
+        settrue2(true);
         istrue=false;
+        navigate('/');
         break;
       }
       // console.log(data[i].email,data[i].password);
