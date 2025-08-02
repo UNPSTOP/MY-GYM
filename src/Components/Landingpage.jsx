@@ -14,11 +14,12 @@ import tick2 from '../assets/tick2.jpeg'
 import { useNavigate } from 'react-router-dom'
 
 const Landingpage = () => {
+  // const  [amount,setamount]=useState(0);
 
-   const handlePayment = () => {
+   const handlePayment = (amount) => {
     const options = {
-      key: "rzp_test_ABC123XYZ456", // 🛑 Replace with your Razorpay key
-      amount: 50000, // in paise = ₹500.00
+      key: "rzp_live_KLergsCNd2cdEm", // 🛑 Replace with your Razorpay key
+      amount: amount*100, // in paise = ₹500.00
       currency: "INR",
       name: "My App",
       description: "Test Transaction",
@@ -28,9 +29,9 @@ const Landingpage = () => {
         // You can send this response to your backend
       },
       prefill: {
-        name: "Mainuddin",
-        email: "main@example.com",
-        contact: "9999999999",
+        name: "Irfan Aslam",
+        email: "irfanaslamo700@gmail.com",
+        contact: "9136835247",
       },
       theme: {
         color: "#3399cc",
@@ -184,7 +185,7 @@ Tone your physique and sculpt your body with customized workouts targeting fat l
             <h2>Professional</h2>
             <p style={{maxWidth:'25rem'}}>ideal for individuals who need Advanced features and    tools for client work</p>
             <h1>$25.00<span>/month</span></h1>
-            <button onClick={()=>navigate('/Signup')}>Get started Now</button>
+            <button onClick={()=>handlePayment(2075)}>Get started Now</button>
           </div>
 
           <div style={{marginTop:'0.5rem',marginLeft:'1.2rem'}}>
@@ -228,8 +229,8 @@ Tone your physique and sculpt your body with customized workouts targeting fat l
             <div >
             <h2>Basic</h2>
             <p style={{maxWidth:'25rem'}}>ideal for individuals who need quick access to basic fitness features</p>
-            <h1>$100 <span>/month</span></h1>
-            <button>Get started Now</button>
+            <h1>$50.0 <span>/month</span></h1>
+            <button onClick={()=>handlePayment(5000)}>Get started Now</button>
           </div>
 
           <div style={{marginTop:'0.5rem',marginLeft:'1.2rem'}}>
