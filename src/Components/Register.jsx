@@ -7,6 +7,7 @@ import number1 from '../assets/phone1.svg'
 import { useState } from 'react'
 import { Numbercontext } from '../App'
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react'
 const Register = () => {
    const [firstname, setFirstname] = useState('')
    const [lastname, setLastname] = useState('')
@@ -48,6 +49,7 @@ const Register = () => {
             localStorage.setItem('user', JSON.stringify(newarr));
             setvalue(newarr)
             settrur2(true);
+            navigate('/');
             console.log(newarr);
             setFirstname('');
             setLastname('');
