@@ -17,6 +17,9 @@ import { useContext } from 'react'
 const Landingpage = () => {
   // const  [amount,setamount]=useState(0);
   const{istrue2}=useContext(Numbercontext);
+  function Zeromony(){
+    alert('included in free plan');
+  }
    const handlePayment = (amount) => {
     if(!istrue2){
       alert('please login first')
@@ -63,8 +66,10 @@ const Landingpage = () => {
         </div>
 
         <div style={{ display: 'flex', gap: '.2rem', listStyle: 'none', padding: '2px', marginLeft: '1rem' }}>
-          <li onClick={()=> navigate('/Register')} style={{ cursor: 'pointer' }}>Register</li>/
-          <li onClick={()=>navigate('/loging')} style={{ cursor: 'pointer' }}>Loging</li>
+          
+          {
+            istrue2?<li onClick={()=>navigate('/')} style={{ cursor: 'pointer' }}>Logout</li>:<ul style={{ display: 'flex',  listStyle: 'none' }}><li onClick={()=>navigate('/loging')}>Login</li>/<li onClick={()=>navigate('/Register')}>Register</li></ul>
+          }
         </div>
         </div>
       </div>
@@ -145,7 +150,7 @@ Tone your physique and sculpt your body with customized workouts targeting fat l
             <h2>Basic</h2>
             <p style={{maxWidth:'25rem'}}>ideal for individuals who need quick access to basic fitness features</p>
             <h1>$0.00 <span>/month</span></h1>
-            <button>Get started Now</button>
+            <button onClick={Zeromony}>Get started Now</button>
           </div>
 
           <div style={{marginTop:'0.5rem',marginLeft:'1.2rem'}}>

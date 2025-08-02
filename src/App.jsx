@@ -1,3 +1,4 @@
+// import { SpeedInsights } from "@vercel/speed-insights/next";
 import { useState,createContext } from 'react'
 import './App.css'
 import Register from './Components/Register'
