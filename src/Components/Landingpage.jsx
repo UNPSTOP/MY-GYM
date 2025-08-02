@@ -14,6 +14,33 @@ import tick2 from '../assets/tick2.jpeg'
 import { useNavigate } from 'react-router-dom'
 
 const Landingpage = () => {
+
+   const handlePayment = () => {
+    const options = {
+      key: "rzp_test_ABC123XYZ456", // 🛑 Replace with your Razorpay key
+      amount: 50000, // in paise = ₹500.00
+      currency: "INR",
+      name: "My App",
+      description: "Test Transaction",
+      image: "https://your-logo-url.com/logo.png",
+      handler: function (response) {
+        alert("Payment successful! ID: " + response.razorpay_payment_id);
+        // You can send this response to your backend
+      },
+      prefill: {
+        name: "Mainuddin",
+        email: "main@example.com",
+        contact: "9999999999",
+      },
+      theme: {
+        color: "#3399cc",
+      },
+    };
+
+    const razorpay = new window.Razorpay(options);
+    razorpay.open();
+  };
+
   const navigate=useNavigate();
   return (
     <div className='main' >
@@ -42,7 +69,7 @@ const Landingpage = () => {
           <div style={{  display: 'flex', flexDirection: 'column', alignItems: 'start' }}><h1>SHAPRE YOURE </h1>
             <h1 style={{ color: 'red', marginTop: '1rem' }}>BODY</h1></div>
           <p style={{  Width: '50%', fontSize: '1rem' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente nemo sunt ratione voluptatum vel consequatur molestias assumenda nulla eos. Dolorem, rem doloremque.</p>
-          <button style={{  }}>Get Start</button>
+
           <h1 style={{ borderBottom: '2px solid red' }}>OPEN
             24H
           </h1>
@@ -157,7 +184,7 @@ Tone your physique and sculpt your body with customized workouts targeting fat l
             <h2>Professional</h2>
             <p style={{maxWidth:'25rem'}}>ideal for individuals who need Advanced features and    tools for client work</p>
             <h1>$25.00<span>/month</span></h1>
-            <button>Get started Now</button>
+            <button onClick={()=>navigate('/Signup')}>Get started Now</button>
           </div>
 
           <div style={{marginTop:'0.5rem',marginLeft:'1.2rem'}}>
@@ -310,6 +337,17 @@ Tone your physique and sculpt your body with customized workouts targeting fat l
             <li> Business Area</li>
             <li>Member</li>
             <li> Newsroom</li>
+          </ul>
+        </div>
+        <div className='footer2'>
+          <ul>
+            <h3>Support</h3>
+            <li onClick={() => navigate('/ShippingandDeliveryPolicy')}>Shipping Policy</li>
+            <li onClick={() => navigate('/PrivacyPolicy')}> Privacy Policy</li>
+            <li onClick={() => navigate('/termsofcondition')}>Terms of Use</li>
+            <li onClick={() => navigate('/CancellationandRefund')} > cancellation and Refund Policy</li>
+            {/* <li onClick={}>Support</li> */}
+            <li onClick={() => navigate('/ContactUs')}>Contact</li>
           </ul>
         </div>
       </div>

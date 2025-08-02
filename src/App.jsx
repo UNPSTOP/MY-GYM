@@ -11,6 +11,10 @@ import Strength from './Components/Strength'
 import Cardio from './Components/Cardio'
 import Health from './Components/Health'
 import Shape from './Components/BodShape'
+import CancellationandRefund from './Components/CancellationandRefund'
+import ShippingandDeliveryPolicy from './Components/ShippingandDeliveryPolicy'
+import Prve from './Components/Prve'
+import ContactUs from './Components/ContactUs'
 export const Numbercontext=createContext();
 
 const router=createBrowserRouter([
@@ -59,10 +63,38 @@ element:<div style={{ width: "100%",display:"flex",justifyContent:"center",align
     </div>
   },
   {
-    path:"/strength",
+    path:"/CancellationandRefund",
     element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
  
-      <Strength/>
+      <CancellationandRefund/>
+    </div>
+  },
+  {
+    path:"/ContactUs",
+    element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+ 
+      <ContactUs/>
+    </div>
+  },
+  {
+    path:"/PrivacyPolicy",
+    element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+ 
+      <Prve/>
+    </div>
+  },
+  {
+    path:"/Landingpage",
+    element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+ 
+      <Landingpage/>
+    </div>
+  },
+  {
+    path:"/ShippingandDeliveryPolicy",
+    element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+ 
+      <ShippingandDeliveryPolicy/>
     </div>
   },
   {
@@ -86,6 +118,7 @@ element:<div style={{ width: "100%",display:"flex",justifyContent:"center",align
       <Shape/>
     </div>
   },
+ 
   {
     path:"*",
     element:<div>
