@@ -76,7 +76,7 @@ const Landingpage = () => {
           <div style={{ display: 'flex', gap: '.2rem', listStyle: 'none', padding: '2px', marginLeft: '1rem' }}>
 
             {
-              istrue2 ? <li onClick={()=>logout} style={{ cursor: 'pointer' }}>Logout</li> : <ul style={{ display: 'flex', listStyle: 'none' }}><li onClick={() => navigate('/loging')}>Login</li>/<li onClick={() => navigate('/Register')}>Register</li></ul>
+              istrue2 ? <li onClick={logout} style={{ cursor: 'pointer' }}>Logout</li> : <ul style={{ display: 'flex', listStyle: 'none' }}><li onClick={() => navigate('/loging')}>Login</li>/<li onClick={() => navigate('/Register')}>Register</li></ul>
             }
           </div>
         </div>
