@@ -203,7 +203,7 @@ const Landingpage = () => {
             <h2>Professional</h2>
             <p style={{ maxWidth: '25rem' }}>ideal for individuals who need Advanced features and    tools for client work</p>
             <h1>$25.00<span>/month</span></h1>
-            <button onClick={() => handlePayment(0.1)}>Get started Now</button>
+            <button onClick={() => handlePayment(1)}>Get started Now</button>
           </div>
 
           <div style={{ marginTop: '0.5rem', marginLeft: '1.2rem' }}>
