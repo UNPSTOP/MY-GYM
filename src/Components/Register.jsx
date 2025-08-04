@@ -3,7 +3,7 @@ import Name from '../assets/Email.png'
 import Password from '../assets/key.svg'
 import Email1 from '../assets/mail.svg'
 import video from '../assets/second1.gif'
-import number1 from '../assets/phone1.svg'
+import numberimg from '../assets/phone1.svg'
 import { useState } from 'react'
 import { Numbercontext } from '../App'
 import { useNavigate } from 'react-router-dom';
@@ -16,23 +16,21 @@ const Register = () => {
    const [confirmpassword, setConfirmpassword] = useState('')
    const [arr, setvalue] = useState([])
    const [istrue, settrue] = useState(false)
-   const [number, setnumber] = useState('')
+   const [number1, setnumber] = useState('')
    const navigate = useNavigate();
    const [numbertrue, setnumberfalse] = useState(false);
    const {settrur2 } = useContext(Numbercontext);
-   function cheqnumber(e) {
+   const  {currentnumber,setcurrentnumber} = useContext(Numbercontext);
+   function cheqnumber() {
       let data=JSON.parse(localStorage.getItem('user')) || [];
       for (let i = 0; i < data.length; i++) {
-         if (number == data[i].number) {
-            setnumber(number)
-            // const [user,setuser]=useState({number12:number});
+         if (number1 == data[i].number) {
+            setnumber(number1)
             setnumberfalse(true);
-            // console.log("yes");
             return false
          }
       }
       setnumberfalse(false);
-      // console.log("not");
       return true
    }
    function register(e) {
@@ -43,14 +41,15 @@ const Register = () => {
 
          if (cheqnumber()) {
             const newarr = [...arr];
-            newarr.push({ firstname, lastname, email, password, number })
-
-
+            newarr.push({ firstname, lastname, email, password, number1 })
+            setcurrentnumber(number1);
+            // console.log("current",currentnumber);
+            // console.log();
             localStorage.setItem('user', JSON.stringify(newarr));
             setvalue(newarr)
             settrur2(true);
             navigate('/');
-            console.log(newarr);
+            // console.log(newarr);
             setFirstname('');
             setLastname('');
             setEmail('');
@@ -96,8 +95,8 @@ const Register = () => {
 
                </div>
                <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', alignItems: 'center' }}>
-                  <img style={{ width: '2rem', height: '2rem' }} src={number1} alt="number" />
-                  <input value={number} required minLength={10} maxLength={10} onChange={(e) => { setnumber(e.target.value), cheqnumber }} pattern="[0-9]{10}" title='Enter 10 digit number' style={{ borderLeft: 'none', borderRight: 'none', borderTop: 'none', borderBottom: '2px solid black', backgroundColor: 'transparent', width: '20rem', height: '2rem', color: 'black', fontFamily: 'cursive' }} type="text" placeholder='Enter your number' />
+                  <img style={{ width: '2rem', height: '2rem' }} src={numberimg} alt="number" />
+                  <input value={number1} required minLength={10} maxLength={10} onChange={(e) => { setnumber(e.target.value), cheqnumber }} pattern="[0-9]{10}" title='Enter 10 digit number' style={{ borderLeft: 'none', borderRight: 'none', borderTop: 'none', borderBottom: '2px solid black', backgroundColor: 'transparent', width: '20rem', height: '2rem', color: 'black', fontFamily: 'cursive' }} type="text" placeholder='Enter your number' />
 
                </div>
                {

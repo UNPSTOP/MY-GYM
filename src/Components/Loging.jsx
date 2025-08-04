@@ -6,9 +6,10 @@ import { useState ,useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Numbercontext } from '../App'
 import { useContext } from 'react'
-import Landingpage from './Landingpage'
+
 const Loging = () => {
-  const{settrue2}=useContext(Numbercontext);
+  const{settrur2}=useContext(Numbercontext);
+  const{setcurrentnumber}=useContext(Numbercontext);
   const[email1,setEmail]=useState('')  
   const[password1,setPassword]=useState('')
   let[data,setData]=useState([])
@@ -18,6 +19,7 @@ useEffect(() => {
     
     // setData(JSON.parse(localStorage.getItem('user')) || []);
 },[])
+
   function login(e) {
     e.preventDefault()
     let istrue=true
@@ -25,7 +27,8 @@ useEffect(() => {
     for(let  i=0;i<data.length;i++){
       if(email1===data[i].email && password1===data[i].password){
         alert('login successful')
-        settrue2(true);
+        setcurrentnumber(data[i].number1);
+        settrur2(true);
         istrue=false;
         navigate('/');
         break;

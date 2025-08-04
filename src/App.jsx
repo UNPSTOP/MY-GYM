@@ -16,6 +16,8 @@ import CancellationandRefund from './Components/CancellationandRefund'
 import ShippingandDeliveryPolicy from './Components/ShippingandDeliveryPolicy'
 import Prve from './Components/Prve'
 import ContactUs from './Components/ContactUs'
+import Receipt from './Components/Receipt'
+
 export const Numbercontext=createContext();
 
 const router=createBrowserRouter([
@@ -27,6 +29,13 @@ element:<div style={{ width: "100%",display:"flex",justifyContent:"center",align
 </div>
   },
   {
+    path:"/Receipt",
+    element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+   
+      <Receipt/>
+    </div>
+  },
+  {
     path:"/Register",
     element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
    
@@ -36,7 +45,7 @@ element:<div style={{ width: "100%",display:"flex",justifyContent:"center",align
   },
   {
     path:"/loging",
-    element: <div>
+    element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
       
       <Loging/>
     </div>
@@ -54,6 +63,13 @@ element:<div style={{ width: "100%",display:"flex",justifyContent:"center",align
     element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
  
       <Newpassord/>
+    </div>
+  },
+  {
+    path:"/Strength",
+    element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
+ 
+      <Strength/>
     </div>
   },
   {
@@ -130,9 +146,10 @@ element:<div style={{ width: "100%",display:"flex",justifyContent:"center",align
 
 function App() {
   const [number, setNumber] = useState('');
-  const[istrue2,settrue2]=useState(false);
+  const[istrue2,settrur2]=useState(false);
+  const[currentnumber,setcurrentnumber]=useState('');
   return (
-<Numbercontext.Provider value={{number,setNumber,istrue2,settrue2}} >
+<Numbercontext.Provider value={{number,setNumber,istrue2,settrur2,currentnumber,setcurrentnumber}} >
     <div className='main1'  >
       <RouterProvider
       router={router}
