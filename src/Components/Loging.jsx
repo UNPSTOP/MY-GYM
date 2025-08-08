@@ -13,7 +13,7 @@ const Loging = () => {
   const[email1,setEmail]=useState('')  
   const[password1,setPassword]=useState('')
   let[data,setData]=useState([])
- const navigate = useNavigate(); 
+ const navigate = useNavigate();
 useEffect(() => {
     setData( JSON.parse(localStorage.getItem('user')) || []);   
     
