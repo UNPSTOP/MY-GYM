@@ -9,6 +9,9 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
+import os
+import dj_database_url
+from decouple import config
 
 from pathlib import Path
 
@@ -45,6 +48,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -79,17 +83,21 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # :/docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "gym_db",
-        "USER": "md_mainuddin",
-        "PASSWORD": "Mohammad783829",
-        "HOST": "localhost",
-        "PORT": "5432",
-        "OPTIONS": {
-            'options': '-c search_path=gymschema,public'
-        }
-    }
+
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
+    # "default": {
+    #     "ENGINE": "django.db.backends.postgresql",
+    #     "NAME": "gym_db",
+    #     "USER": "md_mainuddin",
+    #     "PASSWORD": "Mohammad783829",
+    #     "HOST": "localhost",
+    #     "PORT": "5432",
+    #     "OPTIONS": {
+    #         'options': '-c search_path=gymschema,public'
+    #     }
+    # }
 }
 
 
@@ -128,6 +136,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
