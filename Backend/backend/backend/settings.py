@@ -84,9 +84,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
 
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
+    'default': dj_database_url.config(default='your-default-db-url')
     # "default": {
     #     "ENGINE": "django.db.backends.postgresql",
     #     "NAME": "gym_db",
