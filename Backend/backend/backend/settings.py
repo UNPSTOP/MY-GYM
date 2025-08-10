@@ -23,13 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-o$gc6w$f*nrnw76f$c7)igfuhf+t#c!hurb*@nb+a8sac!^2#0'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = [
     'my-gym-8.onrender.com',
+    'localhost',
+    '127.0.0.1',
 ]
 
 
@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
 
-    'default': dj_database_url.config(default='your-default-db-url')
+    'default': dj_database_url.config(default=config('DATABASE_URL'))
     # "default": {
     #     "ENGINE": "django.db.backends.postgresql",
     #     "NAME": "gym_db",
