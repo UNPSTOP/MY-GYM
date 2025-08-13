@@ -10,8 +10,9 @@ import { useContext } from 'react'
 const Loging = () => {
   const{settrur2}=useContext(Numbercontext);
   const{setcurrentnumber}=useContext(Numbercontext);
-  const[email1,setEmail]=useState('')  ;
-  const[password1,setPassword]=useState('');
+  const[email1,setEmail]=useState('')  
+  const[password1,setPassword]=useState('')
+  let[data,setData]=useState([])
  const navigate = useNavigate(); 
 
 

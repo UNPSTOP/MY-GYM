@@ -55,11 +55,14 @@ const Register = () => {
             const newarr = [...arr];
             newarr.push({ firstname, lastname, email, password, number1 })
             setcurrentnumber(number1);
-              fetch('https://backen-databace.onrender.com/api/product', {
+               await fetch('https://backen-databace.onrender.com/api/product', {
                method: 'POST',
                headers: {
                   'Content-Type': 'application/json',
+
                },
+              
+
                body: JSON.stringify({
                   name: firstname + ' ' + lastname,
                   email: email,
@@ -68,7 +71,7 @@ const Register = () => {
                   payment_status: false,
                   payment_id: "122321",
                   payment_amount: 0,
-                  day: 0
+                  day: 0,
                }),
             });
             // localStorage.setItem('user', JSON.stringify(newarr));
