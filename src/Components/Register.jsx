@@ -21,35 +21,60 @@ const Register = () => {
    const [numbertrue, setnumberfalse] = useState(false);
    const {settrur2 } = useContext(Numbercontext);
    const  {currentnumber,setcurrentnumber} = useContext(Numbercontext);
-   function cheqnumber() {
-      let data=JSON.parse(localStorage.getItem('user')) || [];
+   async function cheqnumber() {
+   try {
+      const response = await fetch('https://backen-databace.onrender.com/api/product');
+      if (!response.ok) {
+         throw new Error('something went wrong');
+      }
+      const data = await response.json();
+      console.log(data);
+      setMembers(data); // Save data to state
       for (let i = 0; i < data.length; i++) {
          if (number1 == data[i].number) {
             setnumber(number1)
+         if (number1 == data[i].phone) {
             setnumberfalse(true);
             return false
+            
          }
       }
+      } 
       setnumberfalse(false);
       return true
+   } catch (e) {
+      console.log(e);
    }
-   function register(e) {
+}
+ async  function register(e) {
 
       e.preventDefault();
       if (password === confirmpassword) {
-
-
-         if (cheqnumber()) {
+          const isuniq=await cheqnumber();
+         if (isuniq) {
             const newarr = [...arr];
             newarr.push({ firstname, lastname, email, password, number1 })
             setcurrentnumber(number1);
-            // console.log("current",currentnumber);
-            // console.log();
-            localStorage.setItem('user', JSON.stringify(newarr));
+              fetch('https://backen-databace.onrender.com/api/product', {
+               method: 'POST',
+               headers: {
+                  'Content-Type': 'application/json',
+               },
+               body: JSON.stringify({
+                  name: firstname + ' ' + lastname,
+                  email: email,
+                  number: number1,                  
+                  password: password,
+                  payment_status: false,
+                  payment_id: "122321",
+                  payment_amount: 0,
+                  day: 0
+               }),
+            });
+            // localStorage.setItem('user', JSON.stringify(newarr));
             setvalue(newarr)
             settrur2(true);
             navigate('/');
-            // console.log(newarr);
             setFirstname('');
             setLastname('');
             setEmail('');

@@ -13,25 +13,30 @@ const Forget = () => {
     let [getotp1, getotp] = useState('')
     const {setNumber}=useContext(Numbercontext)
    const navigate = useNavigate();
-    let[data,setdata]=useState([])
-    useEffect(() => {
-        setdata(JSON.parse(localStorage.getItem('user')) || []);
-    },[])
 
-    function cheqnumber(){
-        for(let i=0;i<data.length;i++){
+       async function cheqnumber(){
+       try{
+           const responce= await fetch('https://backen-databace.onrender.com/api/product');
+           if(!responce.ok){
+             throw new Error('something went wrong');
+           }
+           const data=await responce.json();
+              for(let i=0;i<data.length;i++){
             if(number===data[i].number){
                 setNumber(number)
                 // const [user,setuser]=useState({number12:number});
                 return true
             }
         }
-        return false
-    }
+        return false;
+       }catch(e){
+           console.log(e);
+       }
+   }
     
-    function getotp2(e) {
-        
-        if(cheqnumber()){
+  async  function getotp2(e) {
+        const istrue=await cheqnumber();
+        if(istrue){
             let otp2=Math.floor(100000 + Math.random() * 900000).toString();
             getotp(otp2)
             alert(otp2)
@@ -40,7 +45,7 @@ const Forget = () => {
      }        
     }
     function cheqotp(){
-        console.log(otp,getotp1);
+        
         if(otp===getotp1){
             return true
         }

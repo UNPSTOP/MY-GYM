@@ -245,10 +245,10 @@ const Landingpage = () => {
         </div>
         <div className='circle' style={{ backgroundColor: ' #56855cff' }}>
           <div >
-            <h2>Basic</h2>
+            <h2>Pro</h2>
             <p style={{ maxWidth: '25rem' }}>ideal for individuals who need quick access to basic fitness features</p>
             <h1>$50.0 <span>/month</span></h1>
-            <button onClick={() => handlePayment(5000)}>Get started Now</button>
+            <button onClick={() => handlePayment(5)}>Get started Now</button>
           </div>
 
           <div style={{ marginTop: '0.5rem', marginLeft: '1.2rem' }}>

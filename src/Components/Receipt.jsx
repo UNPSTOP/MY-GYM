@@ -1,4 +1,4 @@
-// src/components/GymCard.jsx
+// import {QRCode} from
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';

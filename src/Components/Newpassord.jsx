@@ -1,6 +1,6 @@
 import React from 'react'
 import Password from '../assets/Passord.jpeg'
-import { useState,useEffect } from 'react'
+import { useState} from 'react'
 import { useContext } from 'react';
 import { Numbercontext } from '../App'
 const Newpassord = () => {
@@ -8,26 +8,50 @@ const Newpassord = () => {
     const {number}=useContext(Numbercontext)
     const [password, setPassword] = useState('')
     const [confirmpassword, setConfirmpassword] = useState('')
-    const[data,setData]=useState([]);
-    useEffect(()=>{
-         setData( JSON.parse(localStorage.getItem('user')) || []);
-    },[]);
-    function submit(e) {
-        e.preventDefault()
-        if (password === confirmpassword) {
-        for(let  i=0;i<data.length;i++){
-            if(number===data[i].number){
-                data[i].password=password;
-                alert('password changed successfully');
-                localStorage.setItem('user', JSON.stringify(data));
-                
-                break;
+      async function get() {
+        try {
+            const responce = await fetch('https://backen-databace.onrender.com/api/product');
+            if (!responce.ok) {
+                throw new Error('something went wrong');
+            }
+            const data = await responce.json();
+             for(let  i=0;i<data.length;i++){
+            if(number==data[i].phone){
+                fetch(`https://backen-databace.onrender.com/api/product/${data[i].id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: data[i].name,
+                        email: data[i].email,
+                        number: data[i].number,
+                        password: password,
+                        payment_status: data[i].payment_status,
+                        payment_id: data[i].payment_id,
+                        payment_amount: data[i].payment_amount,
+                        day: data[i].day
+                    }),
+                })
+                return true;
             }
         }
+        return false;
+        } catch (e) {
+            console.log(e);
+        }
+        
+    }
+
+  async  function submit(e) {
+        e.preventDefault();
+        if (password === confirmpassword) {
+            const istrue=await get();
+            istrue && navigator('/');
         }else{
             alert('password not matched')
         }
-        console.log(data);
+      
     }
     return (
         <div style={{ backgroundColor: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem', boxShadow: 'rgba(8, 8, 8, 1) 0px 5px 15px',borderRadius:'1rem' ,maxWidth: '67%' }}>
