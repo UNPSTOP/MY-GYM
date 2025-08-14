@@ -18,11 +18,12 @@ const Landingpage = () => {
   // const  [amount,setamount]=useState(0);
   const { currentnumber } = useContext(Numbercontext);
   const { istrue2, settrur2 } = useContext(Numbercontext);
+  const {setday,setamount,setupiid}=useContext(Numbercontext);
   function Zeromony() {
     alert('included in free plan');
     // console.log("curr",currentnumber);
   }
-  const handlePayment = (amount) => {
+  const handlePayment = (amount,day) => {
     if (!istrue2) {
       alert('please login first')
     } else {
@@ -35,6 +36,10 @@ const Landingpage = () => {
         image: "https://your-logo-url.com/logo.png",
         handler: function (response) {
           alert("Payment successful! ID: " + response.razorpay_payment_id);
+          setupiid(response.razorpay_payment_id);
+          setday(day);
+          setamount(amount);
+
           navigate('/Receipt');
           // You can send this response to your backend
         },
@@ -203,7 +208,7 @@ const Landingpage = () => {
             <h2>Professional</h2>
             <p style={{ maxWidth: '25rem' }}>ideal for individuals who need Advanced features and    tools for client work</p>
             <h1>$25.00<span>/month</span></h1>
-            <button onClick={() => handlePayment(1)}>Get started Now</button>
+            <button onClick={() => handlePayment(1,90)}>Get started Now</button>
           </div>
 
           <div style={{ marginTop: '0.5rem', marginLeft: '1.2rem' }}>
@@ -248,7 +253,7 @@ const Landingpage = () => {
             <h2>Pro</h2>
             <p style={{ maxWidth: '25rem' }}>ideal for individuals who need quick access to basic fitness features</p>
             <h1>$50.0 <span>/month</span></h1>
-            <button onClick={() => handlePayment(5)}>Get started Now</button>
+            <button onClick={() => handlePayment(5,200)}>Get started Now</button>
           </div>
 
           <div style={{ marginTop: '0.5rem', marginLeft: '1.2rem' }}>

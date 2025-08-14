@@ -8,35 +8,40 @@ import { Numbercontext } from '../App'
 import { useContext } from 'react'
 
 const Loging = () => {
-  const{settrur2}=useContext(Numbercontext);
-  const{setcurrentnumber}=useContext(Numbercontext);
+ 
   const[email1,setEmail]=useState('')  
   const[password1,setPassword]=useState('')
-  let[data,setData]=useState([])
- const navigate = useNavigate(); 
+  const navigate = useNavigate(); 
 
-
+  const{settrur2}=useContext(Numbercontext);
+  const{setcurrentnumber}=useContext(Numbercontext);
+ const{setcurrentemail}=useContext(Numbercontext);
 async function login(e) {
-    e.preventDefault()
+    e.preventDefault();
      try{
     const responce= await fetch('https://backen-databace.onrender.com/api/product/');
     if(!responce.ok){
       throw new Error('something went wrong');
     }
-    const data=await responce.json();
+    const result=await responce.json();
+    const userdata=result.data;
+     const foundUser = userdata.find((user) => user.email === email1 && user.password === password1);
      let istrue=true
-    
-    for(let  i=0;i<data.length;i++){
-      if(email1===data[i].email && password1===data[i].password){
+     console.log(userdata);
+      if(foundUser){
+        settrur2(true);
+        setcurrentnumber(userdata.number);
+        setcurrentemail(email1);
+        istrue=false
+        console.log('login success');
         navigate('/');
-        break;
-      }
-    }
+        setEmail('');
+        setPassword('');
+        
+        }
     if(istrue){
       alert('login failed')
     }
-// console.log(email1,password1);
-    
   }catch(e){
     console.log(e);
   }

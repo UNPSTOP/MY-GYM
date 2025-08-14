@@ -26,6 +26,7 @@ path:"/",
 element:<div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
   
   <Landingpage/>
+  {/* <Receipt/> */}
 </div>
   },
   {
@@ -145,11 +146,15 @@ element:<div style={{ width: "100%",display:"flex",justifyContent:"center",align
 ]);
 
 function App() {
-  const [number, setNumber] = useState('');
+  
   const[istrue2,settrur2]=useState(false);
   const[currentnumber,setcurrentnumber]=useState('');
+  const [currentemail, setcurrentemail] = useState('');
+  const [day1,setday]=useState(0);
+  const[amount,setamount]=useState(0);
+  const[upiid,setupiid]=useState('');
   return (
-<Numbercontext.Provider value={{number,setNumber,istrue2,settrur2,currentnumber,setcurrentnumber}} >
+<Numbercontext.Provider value={{istrue2,settrur2,currentnumber,setcurrentnumber,currentemail,setcurrentemail,day1,setday,amount,setamount,upiid,setupiid}} >
     <div className='main1'  >
       <RouterProvider
       router={router}

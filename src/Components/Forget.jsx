@@ -20,14 +20,13 @@ const Forget = () => {
            if(!responce.ok){
              throw new Error('something went wrong');
            }
-           const data=await responce.json();
-              for(let i=0;i<data.length;i++){
-            if(number===data[i].number){
+           const result=await responce.json();
+           const data=result.data;
+           const fundenumber=data.find((user) => user.number === number);
+            if(fundenumber){
                 setNumber(number)
-                // const [user,setuser]=useState({number12:number});
                 return true
             }
-        }
         return false;
        }catch(e){
            console.log(e);
@@ -54,8 +53,9 @@ const Forget = () => {
      function forget(e) {
         e.preventDefault()
         if(cheqotp()){
-            alert('submit successfully')
+            
             navigate('/newpassord')
+            alert('submit successfully')
         }else{
             alert('enter valid otp')
         }
