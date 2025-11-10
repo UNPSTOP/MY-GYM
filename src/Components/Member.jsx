@@ -16,7 +16,7 @@ function Member() {
         style={{
           fontSize: "1.1rem",
           lineHeight: "1.6",
-          color: "#555"
+         color: "white",
         }}
       >
         Members can use all workout zones, cardio machines, weight training
