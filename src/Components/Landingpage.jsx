@@ -107,7 +107,7 @@ const Landingpage = () => {
         <h2>PROGRAM</h2>
 
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <div className='box' id="#section1">
+          <div className='box' id="section1">
             <img src={dumbel} alt="" />
             <h3>Strength Training</h3>
             💪 Strength Training
@@ -120,7 +120,7 @@ const Landingpage = () => {
 
 
 
-          <div className='box' id="#section2">
+          <div className='box' id="section2">
             <img src={runing} alt="cardio" />
             <h3>Cardio Training</h3>
             <p>
@@ -132,7 +132,7 @@ const Landingpage = () => {
           </div>
 
 
-          <div className='box' id="#section3">
+          <div className='box' id="section3">
             <img src={hart} alt="hart" />
             <h3>Health Training</h3>
             <p>
@@ -142,7 +142,7 @@ const Landingpage = () => {
             <button onClick={() => navigate('/Health')} style={{ marginTop: '-0.5rem' }}>Get started</button>
           </div>
 
-          <div className='box' id="#section4">
+          <div className='box' id="section4">
             <img src={clock} alt="clock" />
             <h3>Shape Body</h3>
             <p>
@@ -347,10 +347,10 @@ The gym maintains a clean and motivating atmosphere with proper equipment, safe 
 
           <ul>
             <h3>program</h3>
-            <li> <a href="#section1">Strenght Training</a></li>
-            <li><a href="#section2">Cardio Training</a> </li>
-            <li> <a href="#section3">Body Building</a> </li>
-            <li> <a href="#section4">Shape  Body</a>  </li>
+            <li> <a style={{ textDecoration: "none" }} href="#section1">Strenght Training</a></li>
+            <li><a style={{ textDecoration: "none" }} href="#section2">Cardio Training</a> </li>
+            <li> <a style={{ textDecoration: "none" }} href="#section3">Body Building</a> </li>
+            <li> <a style={{ textDecoration: "none" }} href="#section4">Shape  Body</a>  </li>
           </ul>
         </div>
         <div className='footer2'>
