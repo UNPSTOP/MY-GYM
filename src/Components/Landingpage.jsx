@@ -169,45 +169,79 @@ Your fitness journey starts here, and we are ready to guide you every step of th
             <h2>Basic</h2>
             <p style={{ maxWidth: '25rem' }}>ideal for individuals who need quick access to basic fitness features</p>
             <h1>$0.00 <span>/month</span></h1>
+            Access to basic gym equipment
+{/* 
+Limited workout space
+
+No trainer guidance included
+
+General fitness tips
+
+Access during non-peak hours
+
+Free body weight exercises area
+
+Basic treadmill access (limited time)
+
+No diet plan included
+
+No locker access
+
+No personal training sessions */}
             <button onClick={Zeromony}>Get started Now</button>
           </div>
 
           <div style={{ marginTop: '0.5rem', marginLeft: '1.2rem' }}>
             <div className='tick'>
-              <img src={tick} alt="yes" />
-              <p>20,000+ og PNG & SVG Graphics</p>
-            </div>
-            <div className='tick'>
-              <img src={tick} alt="yes" />
-              <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div className='tick'>
-              <img src={wrongtick} alt="no" />
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>
-            <div className='tick'>
-              <img src={wrongtick} alt="no" />
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+  <img src={tick} alt="yes" />
+  <p>Access to basic gym equipment</p>
+</div>
 
-            </div>
-            <div className='tick'>
-              <img src={wrongtick} alt="no" />
-              <p>Lorem ipsum dolor sit.</p>
-            </div>
-            <div className='tick'>
-              <img src={wrongtick} alt="no" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. in ex. Quae.</p>
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Limited workout space</p>
+</div>
 
-            </div>
-            <div className='tick'>
-              <img src={wrongtick} alt="no" />
-              <p>Lorem ipsum dolor sit.</p>
-            </div>
-            <div className='tick'>
-              <img src={wrongtick} alt="no" />
-              <p>Lorem, ipsum dolor.</p>
-            </div>
-          </div>
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>No trainer guidance included</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>General fitness tips</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Access during non-peak hours</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Free body weight exercises area</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Basic treadmill access (limited time)</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>No diet plan included</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>No locker access</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>No personal training sessions</p>
+</div>
+
         </div>
         <div className='circle' style={{ backgroundColor: ' #f17109ff' }}>
           <div >
@@ -218,42 +252,56 @@ Your fitness journey starts here, and we are ready to guide you every step of th
           </div>
 
           <div style={{ marginTop: '0.5rem', marginLeft: '1.2rem' }}>
-            <div className='tick'>
-              <img src={tick} alt="yes" />
-              <p>20,000+ og PNG & SVG Graphics</p>
-            </div>
-            <div className='tick'>
-              <img src={tick} alt="yes" />
-              <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div className='tick'>
-              <img src={tick} alt="no" />
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>
-            <div className='tick'>
-              <img src={tick} alt="no" />
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
-
-            </div>
-            <div className='tick'>
-              <img src={tick} alt="no" />
-              <p>Lorem ipsum dolor sit.</p>
-            </div>
-            <div className='tick'>
-              <img src={tick} alt="no" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. in ex. Quae.</p>
-
-            </div>
-            <div className='tick'>
-              <img src={wrongtick} alt="no" />
-              <p>Lorem ipsum dolor sit.</p>
-            </div>
-            <div className='tick'>
-              <img src={wrongtick} alt="no" />
-              <p>Lorem, ipsum dolor.</p>
-            </div>
+          <div className='tick'>
+          <img src={tick} alt="yes" />
+          <p>Full access to all gym equipment</p>
           </div>
-        </div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Unlimited cardio workouts</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Group training sessions</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Trainer support during working hours</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Basic diet chart included</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Dedicated stretching/mobility zone</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Locker access</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Weekly progress tracking</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>1 personal training session per month</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Body fat analysis</p>
+</div>
+</div>
         <div className='circle' style={{ backgroundColor: ' #56855cff' }}>
           <div >
             <h2>Pro</h2>
@@ -263,44 +311,55 @@ Your fitness journey starts here, and we are ready to guide you every step of th
           </div>
 
           <div style={{ marginTop: '0.5rem', marginLeft: '1.2rem' }}>
-            <div className='tick'>
-              <img src={tick} alt="yes" />
-              <p>20,000+ og PNG & SVG Graphics</p>
-            </div>
-            <div className='tick'>
-              <img src={tick} alt="yes" />
-              <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div className='tick'>
-              <img src={tick} alt="no" />
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </div>
-            <div className='tick'>
-              <img src={tick} alt="no" />
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
+          <div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Unlimited access to all facilities</p>
+</div>
 
-            </div>
-            <div className='tick'>
-              <img src={tick} alt="no" />
-              <p>Lorem ipsum dolor sit.</p>
-            </div>
-            <div className='tick'>
-              <img src={tick} alt="no" />
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. in ex. Quae.</p>
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Personal trainer support</p>
+</div>
 
-            </div>
-            <div className='tick'>
-              <img src={tick} alt="no" />
-              <p>Lorem ipsum dolor sit.</p>
-            </div>
-            <div className='tick'>
-              <img src={tick} alt="no" />
-              <p>Lorem, ipsum dolor.</p>
-            </div>
-          </div>
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Custom workout + diet plan</p>
+</div>
 
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Premium cardio & strength zone</p>
+</div>
 
-        </div>
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Priority locker and shower access</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Weekly body transformation audit</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Unlimited group classes</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Fast-track customer support</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Special weight-loss programs</p>
+</div>
+
+<div className='tick'>
+  <img src={tick} alt="yes" />
+  <p>Free monthly fitness assessment</p>
+</div>
 
       </div>
 
