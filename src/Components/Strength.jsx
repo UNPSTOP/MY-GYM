@@ -15,9 +15,9 @@ const Strength = () => {
           <img style={{ borderRadius: "50%", width: "100px", height: "100px" }} src={trainer} alt="trener" />
         </div>
         <div style={{ display: "flex", flexDirection: "column", }}>
-          <h3 style={{ fontSize: "1.5rem", marginBottom: "-1rem" }}>Jhon Doe</h3>
-          <p style={{ fontSize: "1rem", marginBottom: "-1rem" }}>Trainer</p>
-          <p style={{maxWidth:'19rem'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+          <h3 style={{ fontSize: "1.5rem", marginBottom: "-1rem" }}>Aarav Singh</h3>
+          <p style={{ fontSize: "1rem", marginBottom: "-1rem" }}>Strength Trainer</p>
+          <p style={{maxWidth:'19rem'}}> Address: Sector 5, Arera Colony, Bhopal, MP.</p>
         </div>
       </div>
 
@@ -103,9 +103,12 @@ const Strength = () => {
       </div>
       <div style={{marginBottom:'2rem'}} >
         <h3 style={{ fontSize: "1.5rem" }}>About Trainer</h3>
-        <p style={{ maxWidth: "20rem" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+        <p style={{ maxWidth: "20rem" }}>Aarav focuses on strength building through proper weightlifting techniques and progressive training plans. His sessions help members increase power, form and muscle growth in a safe and structured way.</p>
         {/* <h2>contact</h2> */}
-        <button>contact</button>
+        <button onClick={() =>
+    window.location.href =
+      "mailto:yourgym@gmail.com?subject=Gym Inquiry&body=Hello, I want to know more about your gym."
+  }>contact</button>
       </div>
     </div>
   )
