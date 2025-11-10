@@ -14,7 +14,7 @@ function BusinessArea() {
         style={{
           fontSize: "1.1rem",
           lineHeight: "1.6",
-          color: "#555"
+          color: "white",
         }}
       >
         Our gym services include strength training, cardio workouts, personal
