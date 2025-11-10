@@ -92,7 +92,13 @@ const Landingpage = () => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'start', padding: '2rem', width: '30%' }}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }}><h1>SHAPRE YOURE </h1>
             <h1 style={{ color: 'red', marginTop: '1rem' }}>BODY</h1></div>
-          <p style={{ Width: '50%', fontSize: '1rem' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente nemo sunt ratione voluptatum vel consequatur molestias assumenda nulla eos. Dolorem, rem doloremque.</p>
+          <p style={{ Width: '50%', fontSize: '1rem' }}><span  style={{ color: "red", fontWeight: "bold"  }} >Welcome to our official gym website.</span>
+This platform is made for people who want a strong, healthy and confident life. Our goal is to give you the right information about our gym in the simplest way.
+
+You can explore our services, see membership details, check updates, and understand how we help members transform their fitness. Everything is clear, fast and mobile-friendly so you get a smooth experience anywhere.
+
+This website is designed to feel clean, modern and easy to use. Whether you are new to fitness or already training, you will find what you need quickly.
+Your fitness journey starts here, and we are ready to guide you every step of the way.</p>
 
           <h1 style={{ borderBottom: '2px solid red' }}>OPEN
             24H
@@ -347,10 +353,10 @@ The gym maintains a clean and motivating atmosphere with proper equipment, safe 
 
           <ul>
             <h3>program</h3>
-            <li> <a style={{ textDecoration: "none" }} href="#section1">Strenght Training</a></li>
-            <li><a style={{ textDecoration: "none" }} href="#section2">Cardio Training</a> </li>
-            <li> <a style={{ textDecoration: "none" }} href="#section3">Body Building</a> </li>
-            <li> <a style={{ textDecoration: "none" }} href="#section4">Shape  Body</a>  </li>
+            <li> <a style={{ textDecoration: "none" ,color:"white"}} href="#section1">Strenght Training</a></li>
+            <li><a style={{ textDecoration: "none",color:"white" }} href="#section2">Cardio Training</a> </li>
+            <li> <a style={{ textDecoration: "none",color:"white" }} href="#section3">Body Building</a> </li>
+            <li> <a style={{ textDecoration: "none",color:"white" }} href="#section4">Shape  Body</a>  </li>
           </ul>
         </div>
         <div className='footer2'>
@@ -367,7 +373,7 @@ The gym maintains a clean and motivating atmosphere with proper equipment, safe 
         <div className='footer2'>
           <ul>
             <h3>Support</h3>
-            <li onClick={() => navigate('/ShippingandDeliveryPolicy')}>Shipping Policy</li>
+            <li   onClick={() => navigate('/ShippingandDeliveryPolicy')}>Shipping Policy</li>
             <li onClick={() => navigate('/PrivacyPolicy')}> Privacy Policy</li>
             <li onClick={() => navigate('/termsofcondition')}>Terms of Use</li>
             <li onClick={() => navigate('/CancellationandRefund')} > cancellation and Refund Policy</li>
