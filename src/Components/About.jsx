@@ -1,6 +1,6 @@
 function About() {
-  return (
-    <div
+   return (
+     <div
       style={{
         padding: "2rem",
         maxWidth: "900px",
@@ -37,5 +37,7 @@ function About() {
     </div>
   );
 }
+ 
+
 
 export default About;
