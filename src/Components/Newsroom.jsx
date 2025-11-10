@@ -14,7 +14,7 @@ function Newsroom() {
         style={{
           fontSize: "1.1rem",
           lineHeight: "1.6",
-          color: "#555"
+         color: "white",
         }}
       >
         Stay updated with gym events, fitness challenges, new equipment,
