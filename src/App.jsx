@@ -18,7 +18,8 @@ import Prve from './Components/Prve'
 // import ContactUs from './Components/ContactUs'
 import Receipt from './Components/Receipt'
 import About from './Components/About'
-import ContactUs from './Components/Contact'
+import ContactUi from './Components/Contact'
+
 
 export const Numbercontext=createContext();
 
