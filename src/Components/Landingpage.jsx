@@ -107,7 +107,7 @@ const Landingpage = () => {
         <h2>PROGRAM</h2>
 
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-          <div className='box'>
+          <div className='box' id="#section1">
             <img src={dumbel} alt="" />
             <h3>Strength Training</h3>
             💪 Strength Training
@@ -120,7 +120,7 @@ const Landingpage = () => {
 
 
 
-          <div className='box'>
+          <div className='box' id="#section2">
             <img src={runing} alt="cardio" />
             <h3>Cardio Training</h3>
             <p>
@@ -132,7 +132,7 @@ const Landingpage = () => {
           </div>
 
 
-          <div className='box'>
+          <div className='box' id="#section3">
             <img src={hart} alt="hart" />
             <h3>Health Training</h3>
             <p>
@@ -142,7 +142,7 @@ const Landingpage = () => {
             <button onClick={() => navigate('/Health')} style={{ marginTop: '-0.5rem' }}>Get started</button>
           </div>
 
-          <div className='box'>
+          <div className='box' id="#section4">
             <img src={clock} alt="clock" />
             <h3>Shape Body</h3>
             <p>
@@ -340,16 +340,17 @@ const Landingpage = () => {
         <div className='footer2'>
           <h1>MAX-<span style={{ color: 'red' }}>GYM</span></h1>
           {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> */}
-          <p style={{ maxWidth: '20rem' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut vitae voluptatibus, eligendi cupiditate magni perspiciatis quo eveniet deserunt, quisquam facere reprehenderit architecto omnis.</p>
+          <p style={{ maxWidth: '20rem' }}>Your gym is a dedicated fitness space built to help every member grow stronger, healthier, and more confident. It offers a balanced environment of strength training, cardio workouts, and functional fitness. Trainers guide members at every level, whether they are beginners or advanced athletes.
+The gym maintains a clean and motivating atmosphere with proper equipment, safe workout zones, and personalized support.</p>
         </div>
         <div className='footer2'>
 
           <ul>
             <h3>program</h3>
-            <li>Strenght Training</li>
-            <li>Cardio Training</li>
-            <li>Body Building</li>
-            <li>Shape  Body</li>
+            <li> <a href="#section1">Strenght Training</a></li>
+            <li><a href="#section2">Cardio Training</a> </li>
+            <li> <a href="#section3">Body Building</a> </li>
+            <li> <a href="#section4">Shape  Body</a>  </li>
           </ul>
         </div>
         <div className='footer2'>
