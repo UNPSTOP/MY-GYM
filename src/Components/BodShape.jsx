@@ -105,7 +105,7 @@ const BodShape = () => {
               <h3 style={{ fontSize: "1.5rem" }}>About Trainer</h3>
               <p style={{ maxWidth: "20rem" }}>Priya specializes in body shaping and transformation programs. Her training blends strength, mobility and effective fat-loss techniques to help members achieve a toned and confident physique.</p>
               {/* <h2>contact</h2> */}
-              <button>contact</button>
+              <button  onClick={() =>window.location.href ="mailto:yourgym@gmail.com?subject=Gym Inquiry&body=Hello, I want to know more about your gym."}>contact</button>
             </div>
           </div>
   )
