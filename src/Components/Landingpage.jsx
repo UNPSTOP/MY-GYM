@@ -358,10 +358,10 @@ The gym maintains a clean and motivating atmosphere with proper equipment, safe 
 
           <ul>
             <h3>About Us</h3>
-            <li>Company info</li>
-            <li> Business Area</li>
-            <li>Member</li>
-            <li> Newsroom</li>
+            <li onClick={() => navigate('/CompanyInfo')}>Company info</li>
+            <li onClick={() => navigate('/BusinessArea')}> Business Area</li>
+            <li onClick={() => navigate('/Member')}>Member</li>
+            <li onClick={() => navigate('/Newsroom')}> Newsroom</li>
           </ul>
         </div>
         <div className='footer2'>
