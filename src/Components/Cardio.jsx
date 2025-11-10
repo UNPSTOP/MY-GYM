@@ -14,9 +14,9 @@ const Cardio = () => {
               <img style={{ borderRadius: "50%", width: "100px", height: "100px" }} src={trainer} alt="trener" />
             </div>
             <div style={{ display: "flex", flexDirection: "column", }}>
-              <h3 style={{ fontSize: "1.5rem", marginBottom: "-1rem" }}>Jhon Doe</h3>
-              <p style={{ fontSize: "1rem", marginBottom: "-1rem" }}>Trainer</p>
-              <p style={{maxWidth:'19rem'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+              <h3 style={{ fontSize: "1.5rem", marginBottom: "-1rem" }}>Riya Mehta</h3>
+              <p style={{ fontSize: "1rem", marginBottom: "-1rem" }}>Cardio Specialist</p>
+              <p style={{maxWidth:'19rem'}}>Address: Shahpura Main Road, Bhopal, MP</p>
             </div>
           </div>
     
@@ -64,9 +64,9 @@ const Cardio = () => {
           </div>
           <div style={{marginBottom:'2rem'}} >
             <h3 style={{ fontSize: "1.5rem" }}>About Trainer</h3>
-            <p style={{ maxWidth: "20rem" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+            <p style={{ maxWidth: "20rem" }}>Riya designs high-energy cardio routines that improve stamina, heart health and overall endurance. Her sessions are fun, motivating and perfect for fat-burning and staying active..</p>
             {/* <h2>contact</h2> */}
-            <button>contact</button>
+            <button  onClick={() =>window.location.href ="mailto:yourgym@gmail.com?subject=Gym Inquiry&body=Hello, I want to know more about your gym."}>contact</button>
           </div>
         </div>
   )
