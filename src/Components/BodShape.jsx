@@ -15,9 +15,9 @@ const BodShape = () => {
                 <img style={{ borderRadius: "50%", width: "100px", height: "100px" }} src={trainer} alt="trener" />
               </div>
               <div style={{ display: "flex", flexDirection: "column", }}>
-                <h3 style={{ fontSize: "1.5rem", marginBottom: "-1rem" }}>Jhon Doe</h3>
-                <p style={{ fontSize: "1rem", marginBottom: "-1rem" }}>Trainer</p>
-                <p style={{maxWidth:'19rem'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+                <h3 style={{ fontSize: "1.5rem", marginBottom: "-1rem" }}>Priya Sharma</h3>
+                <p style={{ fontSize: "1rem", marginBottom: "-1rem" }}>Body Transformation Expert</p>
+                <p style={{maxWidth:'19rem'}}>Address: MP Nagar Zone II, Bhopal, MP</p>
               </div>
             </div>
       
@@ -103,7 +103,7 @@ const BodShape = () => {
             </div>
             <div style={{marginBottom:'2rem'}} >
               <h3 style={{ fontSize: "1.5rem" }}>About Trainer</h3>
-              <p style={{ maxWidth: "20rem" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+              <p style={{ maxWidth: "20rem" }}>Priya specializes in body shaping and transformation programs. Her training blends strength, mobility and effective fat-loss techniques to help members achieve a toned and confident physique.</p>
               {/* <h2>contact</h2> */}
               <button>contact</button>
             </div>
