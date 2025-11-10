@@ -15,7 +15,7 @@ function Contact() {
       <p
         style={{
           fontSize: "1.1rem",
-          color: "#444",
+          color: "White",
           marginBottom: "1.5rem"
         }}
       >
@@ -44,7 +44,7 @@ function Contact() {
         style={{
           marginTop: "1.5rem",
           fontSize: "1rem",
-          color: "#555"
+          color: "white"
         }}
       >
         <p>📍 Location: Bhopal, Madhya Pradesh</p>
