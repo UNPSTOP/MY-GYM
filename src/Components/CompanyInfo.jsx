@@ -16,7 +16,7 @@ function CompanyInfo() {
         style={{
           fontSize: "1.1rem",
           lineHeight: "1.6",
-          color: "#555"
+    color: "white",
         }}
       >
         Our gym helps members improve strength, energy and overall fitness. We
