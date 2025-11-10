@@ -18,7 +18,7 @@ import Prve from './Components/Prve'
 // import ContactUs from './Components/ContactUs'
 import Receipt from './Components/Receipt'
 import About from './Components/About'
-import ContactUi from './Components/Contact'
+import Contact from './Components/Contact'
 
 
 export const Numbercontext=createContext();
@@ -94,7 +94,7 @@ element:<div style={{ width: "100%",display:"flex",justifyContent:"center",align
     path:"/ContactUs",
     element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
  
-      <ContactUi/>
+      <Contact/>
     </div>
   },
   {
