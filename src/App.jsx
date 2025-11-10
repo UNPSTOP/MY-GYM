@@ -19,7 +19,11 @@ import Prve from './Components/Prve'
 import Receipt from './Components/Receipt'
 import About from './Components/About'
 import Contact from './Components/Contact'
-
+ // 
+import CompanyInfo from './Components/CompanyInfo'
+import BusinessArea from './Components/BusinessArea'
+import Member from './Components/Member'
+import Newsroom from './Components/Newsroom'
 
 export const Numbercontext=createContext();
 
@@ -29,7 +33,42 @@ path:"/",
 element:<div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
   
   <Landingpage/>
-  {/* <Receipt/> */}
+ 
+</div>
+  },
+    {
+path:"/CompanyInfo",
+element:<div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+  
+  <CompanyInfo/>
+ 
+</div>
+  },
+  
+    {
+path:"/BusinessArea",
+element:<div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+  
+  <BusinessArea/>
+ 
+</div>
+  },
+    {
+path:"/Member",
+element:<div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+  
+  
+  <Member/>
+  
+</div>
+  },
+  {
+path:"/Newsroom",
+element:<div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}} >
+  
+  
+  <Newsroom/>
+  
 </div>
   },
   {
