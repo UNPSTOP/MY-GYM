@@ -14,7 +14,7 @@ function About() {
         style={{
           fontSize: "1.1rem",
           lineHeight: "1.6",
-          color: "#555",
+          color: "White",
           marginBottom: "2rem"
         }}
       >
