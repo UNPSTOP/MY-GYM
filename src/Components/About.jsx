@@ -25,15 +25,7 @@ function About() {
         athlete, we support them to reach their fitness goals.
       </p>
 
-      <img
-        src="https://images.unsplash.com/photo-1517964101294-361f9a3ac201"
-        alt="Gym"
-        style={{
-          width: "100%",
-          borderRadius: "12px",
-          objectFit: "cover"
-        }}
-      />
+ 
     </div>
   );
 }
