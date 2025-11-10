@@ -15,8 +15,10 @@ import Shape from './Components/BodShape'
 import CancellationandRefund from './Components/CancellationandRefund'
 import ShippingandDeliveryPolicy from './Components/ShippingandDeliveryPolicy'
 import Prve from './Components/Prve'
-import ContactUs from './Components/ContactUs'
+// import ContactUs from './Components/ContactUs'
 import Receipt from './Components/Receipt'
+import About from './Components/About'
+import ContactUs from './Components/Contact'
 
 export const Numbercontext=createContext();
 
@@ -91,7 +93,7 @@ element:<div style={{ width: "100%",display:"flex",justifyContent:"center",align
     path:"/ContactUs",
     element: <div style={{ width: "100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
  
-      <ContactUs/>
+      <ContactUi/>
     </div>
   },
   {
@@ -136,13 +138,22 @@ element:<div style={{ width: "100%",display:"flex",justifyContent:"center",align
       <Shape/>
     </div>
   },
- 
+ {
+    path:"/about",
+    element:<div>
+      {/* <h1 style={{color:"red",fontSize:"2rem",fontWeight:"bold"}}>404 page not found</h1> */}
+      <About/>
+    </div>
+  },
+
+  
   {
     path:"*",
     element:<div>
       <h1 style={{color:"red",fontSize:"2rem",fontWeight:"bold"}}>404 page not found</h1>
     </div>
-  }
+  },
+  
 ]);
 
 function App() {
