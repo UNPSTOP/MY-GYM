@@ -72,9 +72,9 @@ const Landingpage = () => {
 
           <div style={{ display: 'flex', flexWrap: 'wrap' }}>
             <ul style={{ display: 'flex', gap: '2rem', listStyle: 'none' }}>
-              <li>Home</li>
-              <li>About</li>
-              <li>Contect</li>
+              <li >Home</li>
+              <li onClick={() => navigate('/about')}>About</li>
+              <li onClick={() => navigate('/ContactUs')}>Contect</li>
             </ul>
           </div>
 
