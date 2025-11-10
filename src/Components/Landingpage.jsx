@@ -169,8 +169,8 @@ const Landingpage = () => {
             <button onClick={Zeromony}>Get started Now</button>
           </div>
 
-          <div style={{ marginTop: '0.5rem', marginLeft: '1.2rem' }}>
-            <div className='tick'><img src={tick} alt="yes" /><p>Access to basic gym equipment</p></div>
+          <div style={{ marginTop: '0.5rem',  }}>
+            {/* <div className='tick'><img src={tick} alt="yes" /><p>Access to basic gym equipment</p></div> */}
             <div className='tick'><img src={tick} alt="yes" /><p>Limited workout space</p></div>
             <div className='tick'><img src={tick} alt="yes" /><p>No trainer guidance included</p></div>
             <div className='tick'><img src={tick} alt="yes" /><p>General fitness tips</p></div>
@@ -194,8 +194,8 @@ const Landingpage = () => {
             <button onClick={() => handlePayment(1, 90)}>Get started Now</button>
           </div>
 
-          <div style={{ marginTop: '0.5rem', marginLeft: '1.2rem' }}>
-            <div className='tick'><img src={tick} alt="yes" /><p>Full access to all gym equipment</p></div>
+          <div style={{ marginTop: '0.5rem',  }}>
+            {/* <div className='tick'><img src={tick} alt="yes" /><p>Full access to all gym equipment</p></div> */}
             <div className='tick'><img src={tick} alt="yes" /><p>Unlimited cardio workouts</p></div>
             <div className='tick'><img src={tick} alt="yes" /><p>Group training sessions</p></div>
             <div className='tick'><img src={tick} alt="yes" /><p>Trainer support during working hours</p></div>
@@ -219,8 +219,8 @@ const Landingpage = () => {
             <button onClick={() => handlePayment(5, 200)}>Get started Now</button>
           </div>
 
-          <div style={{ marginTop: '0.5rem', marginLeft: '1.2rem' }}>
-            <div className='tick'><img src={tick} alt="yes" /><p>Unlimited access to all facilities</p></div>
+          <div style={{ marginTop: '0.5rem', }}>
+            {/* <div className='tick'><img src={tick} alt="yes" /><p>Unlimited access to all facilities</p></div> */}
             <div className='tick'><img src={tick} alt="yes" /><p>Personal trainer support</p></div>
             <div className='tick'><img src={tick} alt="yes" /><p>Custom workout + diet plan</p></div>
             <div className='tick'><img src={tick} alt="yes" /><p>Premium cardio & strength zone</p></div>
