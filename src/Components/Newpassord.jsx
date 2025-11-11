@@ -18,12 +18,12 @@ const Newpassord = () => {
             }
             const result = await responce.json();
             const data = result.data;
-            
-            const fundenumber = data.find(user => user._id === number);
+            console.log(number)
+            const fundenumber = data.find(user => user._id == number);
 
 
-            console.log("found =>", fundenumber);
-            console.log(fundenumber._id);
+            console.log("found =>",  fundenumber );
+            console.log( fundenumber._id);
             if (fundenumber) {
                 fetch(`https://backen-databace.onrender.com/api/product/${fundenumber._id}`, {
                     method: 'PUT',
