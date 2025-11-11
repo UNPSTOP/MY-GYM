@@ -12,7 +12,8 @@ const Forget = () => {
 const [number, setnumber] = useState("");
     const [otp, setotp] = useState("");
     const [serverOtp, setServerOtp] = useState("");   
-    const { setNumber } = useContext(Numbercontext);
+    const { setcurrentnumber } = useContext(Numbercontext);
+    // currentnumber,setcurrentnumber
     const navigate = useNavigate();
 
    
@@ -38,7 +39,7 @@ console.log("INPUT:", JSON.stringify(cleanInput));
             if (fundenumber.number==cleanInput) {
                  setNumber(number)
                 console.log(fundenumber._id)
-                setnumber(cleanInput);
+                setcurrentnumber(cleanInput);
                 return true;
             }
 
