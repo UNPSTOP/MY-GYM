@@ -29,7 +29,7 @@ const [number, setnumber] = useState("");
 
             const cleanInput = number.trim();
 
-            const fundenumber = data.find(user => user.number.replace(/\s+/g, '') === cleanInput.replace(/\s+/g, ''));
+            const fundenumber =await data.find(user => user.number.replace(/\s+/g, '') === cleanInput.replace(/\s+/g, ''));
 
             console.log("found =>", fundenumber);
 console.log("DB:", JSON.stringify(fundenumber.number));
@@ -50,9 +50,9 @@ console.log("INPUT:", JSON.stringify(cleanInput));
 
    
     async function getotp2(e) {
-         e.preventDefault();
+         // e.preventDefault();
         try {
-            const isValid =  cheqnumber();
+            const isValid =await  cheqnumber();
             console.log("is true", isValid);
 
             if (!isValid) {
