@@ -29,9 +29,12 @@ const Forget = () => {
            console.log(fundenumber)
             if(fundenumber){
                 setNumber(number)
+                console.log("we got a valid unumber")
                 return true
-            }
+            }else{
+           
         return false;
+            }
        }catch(error){
            console.log(error);
            return false;
