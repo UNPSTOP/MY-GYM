@@ -125,28 +125,28 @@ const Landingpage = () => {
           <div className='box' id="section1">
             <img src={dumbel} alt="" />
             <h3>Strength Training</h3>
-            💪 Strength Training...
+         <p> 💪 Strength Training Build muscle, increase endurance, and boost metabolism through structured resistance workouts. Strength training enhances bone density and overall physical performance, making daily activities easier and safer.</p>
             <button onClick={() => navigate('/Strength')}>Get started</button>
           </div>
 
           <div className='box' id="section2">
             <img src={runing} alt="cardio" />
             <h3>Cardio Training</h3>
-            🏃‍♂️ Cardio Training...
+           <p> 🏃‍♂️ Cardio Training Improve your heart health, stamina, and energy levels with cardiovascular workouts. From running to cycling, cardio training keeps your blood flowing and burns calories effectively for long-term wellness. </p>
             <button onClick={() => navigate('/Cardio')}>Get started</button>
           </div>
 
           <div className='box' id="section3">
             <img src={hart} alt="hart" />
             <h3>Health Training</h3>
-            ❤️ Health Training...
+     <p> ❤️ Health Training Focused on overall wellness, health training combines flexibility, balance, and functional movements. It’s ideal for preventing injuries, improving posture, and promoting a healthy lifestyle inside and out. </p>
             <button onClick={() => navigate('/Health')} style={{ marginTop: '-0.5rem' }}>Get started</button>
           </div>
 
           <div className='box' id="section4">
             <img src={clock} alt="clock" />
             <h3>Shape Body</h3>
-            ⏱️ Shape Body...
+        <p> ⏱️ Shape Body Tone your physique and sculpt your body with customized workouts targeting fat loss and muscle definition. Shape Body training blends cardio, strength, and mobility to help you achieve a lean, defined look. </p>
             <button onClick={() => navigate('/Shape')}>Get started</button>
           </div>
 
@@ -165,11 +165,11 @@ const Landingpage = () => {
             <h2>Basic</h2>
             <p style={{ maxWidth: '25rem' }}>ideal for individuals who need quick access to basic fitness features</p>
             <h1>$0.00 <span>/month</span></h1>
-            Access to basic gym equipment
+            {/* Access to basic gym equipment */}
             <button onClick={Zeromony}>Get started Now</button>
           </div>
 
-          <div style={{ marginTop: '0.5rem',  }}>
+          <div style={{ marginTop: '0.5rem', textAlign: "left"  }}>
             {/* <div className='tick'><img src={tick} alt="yes" /><p>Access to basic gym equipment</p></div> */}
             <div className='tick'><img src={tick} alt="yes" /><p>Limited workout space</p></div>
             <div className='tick'><img src={tick} alt="yes" /><p>No trainer guidance included</p></div>
@@ -194,7 +194,7 @@ const Landingpage = () => {
             <button onClick={() => handlePayment(1, 90)}>Get started Now</button>
           </div>
 
-          <div style={{ marginTop: '0.5rem',  }}>
+          <div style={{ marginTop: '0.5rem', textAlign: "left"  }}>
             {/* <div className='tick'><img src={tick} alt="yes" /><p>Full access to all gym equipment</p></div> */}
             <div className='tick'><img src={tick} alt="yes" /><p>Unlimited cardio workouts</p></div>
             <div className='tick'><img src={tick} alt="yes" /><p>Group training sessions</p></div>
@@ -219,7 +219,7 @@ const Landingpage = () => {
             <button onClick={() => handlePayment(5, 200)}>Get started Now</button>
           </div>
 
-          <div style={{ marginTop: '0.5rem', }}>
+          <div style={{ marginTop: '0.5rem', textAlign: "left" }}>
             {/* <div className='tick'><img src={tick} alt="yes" /><p>Unlimited access to all facilities</p></div> */}
             <div className='tick'><img src={tick} alt="yes" /><p>Personal trainer support</p></div>
             <div className='tick'><img src={tick} alt="yes" /><p>Custom workout + diet plan</p></div>
