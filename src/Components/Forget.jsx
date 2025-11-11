@@ -32,22 +32,28 @@ const Forget = () => {
                 return true
             }
         return false;
-       }catch(e){
-           console.log(e);
+       }catch(error){
+           console.log(error);
+           return false;
        }
    }
     
   async  function getotp2() {
-        const istrue=await cheqnumber();
-      console.log(istrue)
+    try{
+       const istrue=await cheqnumber();
+      console.log("is true",istrue)
         if(istrue){
             let otp2=Math.floor(100000 + Math.random() * 900000).toString();
             getotp(otp2)
             return alert(otp2)
      }else{
-        alert('enter valid number')
-     }        
+       return  alert('enter valid number')
+     }     
+    }catch(error){
+        console.log(error)
+
     }
+  }
     function cheqotp(){
         
         if(otp===getotp1){
