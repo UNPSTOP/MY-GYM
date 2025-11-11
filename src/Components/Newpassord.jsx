@@ -18,7 +18,12 @@ const Newpassord = () => {
             }
             const result = await responce.json();
             const data = result.data;
-            const fundenumber = data.find((user) => user.number === number);
+            
+            const cleanInput = number.trim();
+
+            const fundenumber = data.find(user => user.number.replace(/\s+/g, '') === cleanInput.replace(/\s+/g, ''));
+
+            console.log("found =>", fundenumber);
             console.log(fundenumber._id);
             if (fundenumber) {
                 fetch(`https://backen-databace.onrender.com/api/product/${fundenumber._id}`, {
