@@ -1,6 +1,6 @@
 import number1 from '../assets/phone1.svg'
 import { useState } from 'react'
-// import OTP from '../assets/OTP.webp'
+import OTP from '../assets/OTP.webp'
 import video from '../assets/video1.gif'
 import { Numbercontext } from '../App'
 import { useContext } from 'react'
@@ -49,9 +49,10 @@ console.log("INPUT:", JSON.stringify(cleanInput));
     }
 
    
-    async function getotp2() {
+    async function getotp2(e) {
+         e.preventDefault();
         try {
-            const isValid = await cheqnumber();
+            const isValid =  cheqnumber();
             console.log("is true", isValid);
 
             if (!isValid) {
