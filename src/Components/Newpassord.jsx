@@ -13,6 +13,7 @@ const Newpassord = () => {
     async function get() {
         try {
             const responce = await fetch('https://backen-databace.onrender.com/api/product');
+            console.log(responce)
             if (!responce.ok) {
                 throw new Error('something went wrong');
             }
