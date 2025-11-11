@@ -4,10 +4,13 @@ import { useState } from 'react'
 import { useContext } from 'react';
 import { Numbercontext } from '../App'
 import { useNavigate } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 const Newpassord = () => {
     const navigate = useNavigate();
+      const location = useLocation();
+  const number = location.state?.myValue; 
 
-   const {currentnumber } = useContext(Numbercontext);
+   
     const [password, setPassword] = useState('')
     const [confirmpassword, setConfirmpassword] = useState('')
     async function get() {
@@ -19,8 +22,8 @@ const Newpassord = () => {
             }
             const result = await responce.json();
             const data = result.data;
-            console.log(currentnumber)
-            const fundenumber = data.find(user => user.number == currentnumber);
+            console.log(number)
+            const fundenumber = data.find(user => user.number == number);
 
 
             console.log("found =>",  fundenumber );
