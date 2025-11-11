@@ -66,8 +66,9 @@ li:hover {
     display: flex;
     /* justify-content: center; */
     /* align-items: center; */
-     textAlign: "left"
+     textAlign: "left";
     padding: 1rem;
+    paddingLeft: "1rem";
     width: 30%;
     /* height: 18rem; */
     flex-direction: column;
