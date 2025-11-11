@@ -18,6 +18,7 @@ const Forget = () => {
        try{
            const responce= await fetch('https://backen-databace.onrender.com/api/product');
            console.log(responce)
+           console.log(number)
            if(!responce.ok){
              throw new Error('something went wrong');
            }
@@ -25,6 +26,7 @@ const Forget = () => {
            const data=result.data;
            console.log(data)
            const fundenumber=data.find((user) => user.number == number);
+           console.log(fundenumber)
             if(fundenumber){
                 setNumber(number)
                 return true
