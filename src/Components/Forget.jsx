@@ -25,8 +25,8 @@ const Forget = () => {
            const result=await responce.json();
            const data=result.data;
            console.log(data)
-           const fundenumber=data.find((user) => user.number == number);
-           console.log(fundenumber)
+          const cleanInput = number.trim();
+          const fundenumber = data.find(user => user.number.trim() === cleanInput);
             if(fundenumber){
                 setNumber(number)
                 console.log("we got a valid unumber")
