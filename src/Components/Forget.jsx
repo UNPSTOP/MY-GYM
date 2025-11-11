@@ -17,12 +17,14 @@ const Forget = () => {
        async function cheqnumber(){
        try{
            const responce= await fetch('https://backen-databace.onrender.com/api/product');
+           console.log(responce)
            if(!responce.ok){
              throw new Error('something went wrong');
            }
            const result=await responce.json();
            const data=result.data;
-           const fundenumber=data.find((user) => user.number === number);
+           console.log(data)
+           const fundenumber=data.find((user) => user.number == number);
             if(fundenumber){
                 setNumber(number)
                 return true
