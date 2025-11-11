@@ -50,10 +50,10 @@ console.log("INPUT:", JSON.stringify(cleanInput));
     }
 
    
-    async function getotp2(e) {
+   function getotp2(e) {
          // e.preventDefault();
-        try {
-            const isValid =await  cheqnumber();
+
+            const isValid = cheqnumber();
             console.log("is true", isValid);
 
             if (!isValid) {
@@ -66,16 +66,13 @@ console.log("INPUT:", JSON.stringify(cleanInput));
             setServerOtp(otp2);
             alert(otp2); 
 
-        } catch (error) {
-            console.log(error);
-        }
     }
 
     function cheqotp() {
         return otp == serverOtp;
     }
 
-    async function forget(e) {
+     function forget(e) {
         e.preventDefault();
         console.log("inside  forget final ")
         if (cheqotp()) {
