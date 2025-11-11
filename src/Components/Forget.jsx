@@ -36,6 +36,7 @@ console.log("DB:", JSON.stringify(fundenumber.number));
 console.log("INPUT:", JSON.stringify(cleanInput));
 
             if (fundenumber.number==cleanInput) {
+                 setNumber(number)
                 setnumber(cleanInput);
                 return true;
             }
@@ -71,14 +72,14 @@ console.log("INPUT:", JSON.stringify(cleanInput));
     }
 
     function cheqotp() {
-        return otp === serverOtp;
+        return otp == serverOtp;
     }
 
-    function forget(e) {
+    async function forget(e) {
         e.preventDefault();
-
+        console.log("inside  forget final ")
         if (cheqotp()) {
-            setNumber(number)
+           
             alert("submit successfully");
             navigate('/newpassord');
         } else {
