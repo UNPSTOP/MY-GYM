@@ -1,6 +1,6 @@
 import number1 from '../assets/phone1.svg'
 import { useState } from 'react'
-import OTP from '../assets/OTP.webp'
+// import OTP from '../assets/OTP.webp'
 import video from '../assets/video1.gif'
 import { Numbercontext } from '../App'
 import { useContext } from 'react'
@@ -36,7 +36,7 @@ console.log("DB:", JSON.stringify(fundenumber.number));
 console.log("INPUT:", JSON.stringify(cleanInput));
 
             if (fundenumber.number==cleanInput) {
-                setNumber(cleanInput);
+                setnumber(cleanInput);
                 return true;
             }
 
