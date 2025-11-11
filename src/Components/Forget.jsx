@@ -29,9 +29,11 @@ const [number, setnumber] = useState("");
 
             const cleanInput = number.trim();
 
-            const fundenumber = data.find(user => user.number.trim() === cleanInput);
+            const fundenumber = data.find(user => user.number.replace(/\s+/g, '') === cleanInput.replace(/\s+/g, ''));
 
             console.log("found =>", fundenumber);
+console.log("DB:", JSON.stringify(user.number));
+console.log("INPUT:", JSON.stringify(cleanInput));
 
             if (fundenumber) {
                 setNumber(cleanInput);
