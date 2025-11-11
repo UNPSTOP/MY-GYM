@@ -35,7 +35,7 @@ const [number, setnumber] = useState("");
 console.log("DB:", JSON.stringify(fundenumber.number));
 console.log("INPUT:", JSON.stringify(cleanInput));
 
-            if (fundenumber) {
+            if (fundenumber.number==cleanInput) {
                 setNumber(cleanInput);
                 return true;
             }
