@@ -37,12 +37,13 @@ const Forget = () => {
        }
    }
     
-  async  function getotp2(e) {
+  async  function getotp2() {
         const istrue=await cheqnumber();
+      console.log(istrue)
         if(istrue){
             let otp2=Math.floor(100000 + Math.random() * 900000).toString();
             getotp(otp2)
-            alert(otp2)
+            return alert(otp2)
      }else{
         alert('enter valid number')
      }        
