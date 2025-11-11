@@ -32,7 +32,7 @@ const [number, setnumber] = useState("");
             const fundenumber = data.find(user => user.number.replace(/\s+/g, '') === cleanInput.replace(/\s+/g, ''));
 
             console.log("found =>", fundenumber);
-console.log("DB:", JSON.stringify(user.number));
+console.log("DB:", JSON.stringify(fundenumber.number));
 console.log("INPUT:", JSON.stringify(cleanInput));
 
             if (fundenumber) {
