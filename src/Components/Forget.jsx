@@ -36,7 +36,8 @@ console.log("DB:", JSON.stringify(fundenumber.number));
 console.log("INPUT:", JSON.stringify(cleanInput));
 
             if (fundenumber.number==cleanInput) {
-                 setNumber(number)
+                 setNumber(fundenumber._id)
+                console.log(fundenumber._id)
                 setnumber(cleanInput);
                 return true;
             }
