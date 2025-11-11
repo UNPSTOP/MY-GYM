@@ -12,7 +12,7 @@ const Forget = () => {
 const [number, setnumber] = useState("");
     const [otp, setotp] = useState("");
     const [serverOtp, setServerOtp] = useState("");   
-    const { setcurrentnumber } = useContext(Numbercontext);
+    // const { setcurrentnumber } = useContext(Numbercontext);
     // currentnumber,setcurrentnumber
     const navigate = useNavigate();
 
@@ -39,7 +39,7 @@ console.log("INPUT:", JSON.stringify(cleanInput));
             if (fundenumber.number==cleanInput) {
                  setNumber(number)
                 console.log(fundenumber._id)
-                setcurrentnumber(cleanInput);
+                  
                 return true;
             }
 
@@ -80,7 +80,7 @@ console.log("INPUT:", JSON.stringify(cleanInput));
         if (cheqotp()) {
            
             alert("submit successfully");
-            navigate('/newpassord');
+            navigate("/newpassord", {state: { myValue: number } }); 
         } else {
             alert("enter valid otp");
         }
