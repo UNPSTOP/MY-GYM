@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom'
 // import {createContext} 
 // const Usercontext=createContext();
 const Forget = () => {
-    const [number, setnumber] = useState('')
+    const [number, setnumber] = useState("")
     const [otp, setotp] = useState('')
     let [getotp1, getotp] = useState('')
     const {setNumber}=useContext(Numbercontext)
