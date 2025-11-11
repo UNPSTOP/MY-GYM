@@ -78,6 +78,7 @@ console.log("INPUT:", JSON.stringify(cleanInput));
         e.preventDefault();
 
         if (cheqotp()) {
+            setNumber(number)
             alert("submit successfully");
             navigate('/newpassord');
         } else {
