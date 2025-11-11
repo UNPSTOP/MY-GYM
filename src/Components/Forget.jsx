@@ -1,77 +1,84 @@
 import number1 from '../assets/phone1.svg'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import OTP from '../assets/OTP.webp'
 import video from '../assets/video1.gif'
 import { Numbercontext } from '../App'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+
 // import {createContext} 
 // const Usercontext=createContext();
 const Forget = () => {
-    const [number, setnumber] = useState("")
-    const [otp, setotp] = useState('')
-    let [getotp1, getotp] = useState('')
-    const {setNumber}=useContext(Numbercontext)
-   const navigate = useNavigate();
+const [number, setnumber] = useState("");
+    const [otp, setotp] = useState("");
+    const [serverOtp, setServerOtp] = useState("");   
+    const { setNumber } = useContext(Numbercontext);
+    const navigate = useNavigate();
 
-       async function cheqnumber(){
-       try{
-           const responce= await fetch('https://backen-databace.onrender.com/api/product');
-           console.log(responce)
-           console.log(number)
-           if(!responce.ok){
-             throw new Error('something went wrong');
-           }
-           const result=await responce.json();
-           const data=result.data;
-           console.log(data)
-          const cleanInput = number.trim();
-          const fundenumber = data.find(user => user.number.trim() === cleanInput);
-            if(fundenumber){
-                setNumber(number)
-                console.log("we got a valid unumber")
-                return true
-            }else{
-           
-        return false;
+   
+    async function cheqnumber() {
+        try {
+            const responce = await fetch('https://backen-databace.onrender.com/api/product');
+
+            if (!responce.ok) {
+                throw new Error('something went wrong');
             }
-       }catch(error){
-           console.log(error);
-           return false;
-       }
-   }
-    
-  async  function getotp2() {
-    try{
-       const istrue=await cheqnumber();
-      console.log("is true",istrue)
-        if(istrue){
-            let otp2=Math.floor(100000 + Math.random() * 900000).toString();
-            getotp(otp2)
-            return alert(otp2)
-     }else{
-       return  alert('enter valid number')
-     }     
-    }catch(error){
-        console.log(error)
 
-    }
-  }
-    function cheqotp(){
-        
-        if(otp===getotp1){
-            return true
+            const result = await responce.json();
+            const data = result.data;
+
+            const cleanInput = number.trim();
+
+            const fundenumber = data.find(user => user.number.trim() === cleanInput);
+
+            console.log("found =>", fundenumber);
+
+            if (fundenumber) {
+                setNumber(cleanInput);
+                return true;
+            }
+
+            return false;
+
+        } catch (error) {
+            console.log(error);
+            return false;
         }
-        return false
     }
-     function forget(e) {
-        e.preventDefault()
-        if(cheqotp()){
-            
-            navigate('/newpassord')
-            alert('submit successfully')
-        }else{
-            alert('enter valid otp')
+
+   
+    async function getotp2() {
+        try {
+            const isValid = await cheqnumber();
+            console.log("is true", isValid);
+
+            if (!isValid) {
+                alert("enter valid number");
+                return;
+            }
+
+            const otp2 = Math.floor(100000 + Math.random() * 900000).toString();
+
+            setServerOtp(otp2);
+            alert(otp2); 
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    function cheqotp() {
+        return otp === serverOtp;
+    }
+
+    function forget(e) {
+        e.preventDefault();
+
+        if (cheqotp()) {
+            alert("submit successfully");
+            navigate('/newpassord');
+        } else {
+            alert("enter valid otp");
         }
     }
     return (
