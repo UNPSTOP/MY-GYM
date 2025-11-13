@@ -99,7 +99,7 @@ const Landingpage = () => {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'start', padding: '2rem', width: '30%' }}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }}>
-            <h1>SHAPRE YOURE</h1>
+            <h1>SHAP YOURE</h1>
             <h1 style={{ color: 'red', marginTop: '1rem' }}>BODY</h1>
           </div>
 
